@@ -11,7 +11,7 @@ MORSE_CODE_reversed = {
     'R': '.-.', 'S': '...', 'T': '-',
     'U': '..-', 'V': '...-', 'W': '.--',
     'X': '-..-', 'Y': '-.--', 'Z': '--..', ' ': '/'
-    }
+}
 
 
 def encryption(lines):
@@ -28,8 +28,11 @@ def encryption(lines):
 
 
 def read_code_reversed(file_path):
-    with open(file_path) as f:
-        return [line.rstrip() for line in f]
+    try:
+        with open(file_path) as f:
+            return [line.rstrip() for line in f]
+    except:
+        raise FileNotFoundError
 
 
 if __name__ == "__main__":
