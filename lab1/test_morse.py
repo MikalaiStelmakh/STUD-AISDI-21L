@@ -20,3 +20,8 @@ def test_encryption_1():
 
 def test_read_1():
     assert morse.read_code_reversed("testFile.txt") == []
+
+
+def test_read_2():
+    with pytest.raises(FileNotFoundError):
+        morse.read_code_reversed("")
