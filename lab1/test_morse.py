@@ -9,3 +9,6 @@ def test_encryption(benchmark):
     lines = ["Ala ma kota"]
     encrypted = ".-  .-..  .-  /  --  .-  /  -.-  ---  -  .-"
     assert benchmark(morse.encryption, lines) == encrypted
+
+def test_encryption_multiline():
+    assert morse.encryption(["Aa", "aA"]) == ".-  .-\n.-  .-"
