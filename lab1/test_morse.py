@@ -16,3 +16,7 @@ def test_encryption_multiline():
 
 def test_encryption_1():
     assert morse.encryption([]) == ""
+
+
+def test_read_1():
+    assert morse.read_code_reversed("testFile.txt") == []
