@@ -12,3 +12,7 @@ def test_encryption(benchmark):
 
 def test_encryption_multiline():
     assert morse.encryption(["Aa", "aA"]) == ".-  .-\n.-  .-"
+
+
+def test_encryption_1():
+    assert morse.encryption([]) == ""
