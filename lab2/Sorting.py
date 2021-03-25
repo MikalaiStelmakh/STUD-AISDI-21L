@@ -16,6 +16,18 @@ def selectionSort(value):
         value = [value[0]] + selectionSort(value[1:])
     return value
 
+def mergeSort(value):
+    if len(value) == 1:
+        return value
+
+    l = value[:len(value)//2]
+    r = value[len(value)//2:]
+
+    l = mergeSort(l)
+    r = mergeSort(r)
+
+    var = bubbleSort(l + r)
+    return var
 
 
 
