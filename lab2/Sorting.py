@@ -26,8 +26,18 @@ def mergeSort(value):
     l = mergeSort(l)
     r = mergeSort(r)
 
-    var = bubbleSort(l + r)
-    return var
+    return merge(l, r)
 
-
-
+def merge(l, r):
+    sorted = []
+    while l and r:
+        greater = True if l[0] > r[0] else False
+        sorted.append(r[0] if greater else l[0])
+        (r if greater else l).remove(r[0] if greater else l[0])
+    while l:
+        sorted.append(l[0])
+        l.remove(l[0])
+    while r:
+        sorted.append(r[0])
+        r.remove(r[0])
+    return sorted
