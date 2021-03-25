@@ -9,7 +9,12 @@ def bubbleSort(value):
         value = bubbleSort(value)
     return value
 
-
+def selectionSort(value):
+    minimum = value[value.index(min(value))]
+    value[value.index(min(value))], value[0] = value[0], minimum
+    if len(value) > 2:
+        value = [value[0]] + selectionSort(value[1:])
+    return value
 
 
 
