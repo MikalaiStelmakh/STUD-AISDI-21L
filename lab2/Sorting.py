@@ -1,11 +1,11 @@
-def readText(path, words):
+def readText(path, size):
     text = []
     with open(path, 'r') as f:
         for line in f:
             for word in line.split():
-                if words > 0:
+                if size > 0:
                     text.append(word)
-                    words -= 1
+                    size -= 1
         return text
 
 
@@ -54,4 +54,3 @@ def merge(l, r):
         sorted.append(r[0])
         r.remove(r[0])
     return sorted
-
