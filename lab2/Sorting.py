@@ -1,28 +1,39 @@
-def bubbleSort(value):
+def readText(path, words):
+    text = []
+    with open(path, 'r') as f:
+        for line in f:
+            for word in line.split():
+                if words > 0:
+                    text.append(word)
+                    words -= 1
+        return text
+
+
+def bubbleSort(lst):
     sorted = True
-    for i in range(len(value[:-1])):
-        if value[i] > value[i+1]:
-            value[i], value[i+1] = value[i+1], value[i]
+    for i in range(len(lst[:-1])):
+        if lst[i] > lst[i+1]:
+            lst[i], lst[i+1] = lst[i+1], lst[i]
             sorted = False
     if not sorted:
-        value = bubbleSort(value)
-    return value
+        lst = bubbleSort(lst)
+    return lst
 
 
-def selectionSort(value):
-    minimum = value[value.index(min(value))]
-    value[value.index(min(value))], value[0] = value[0], minimum
-    if len(value) > 2:
-        value = [value[0]] + selectionSort(value[1:])
-    return value
+def selectionSort(lst):
+    minimum = lst[lst.index(min(lst))]
+    lst[lst.index(min(lst))], lst[0] = lst[0], minimum
+    if len(lst) > 2:
+        lst = [lst[0]] + selectionSort(lst[1:])
+    return lst
 
 
-def mergeSort(value):
-    if len(value) == 1:
-        return value
+def mergeSort(lst):
+    if len(lst) == 1:
+        return lst
 
-    l = value[:len(value)//2]
-    r = value[len(value)//2:]
+    l = lst[:len(lst)//2]
+    r = lst[len(lst)//2:]
 
     l = mergeSort(l)
     r = mergeSort(r)
@@ -43,3 +54,4 @@ def merge(l, r):
         sorted.append(r[0])
         r.remove(r[0])
     return sorted
+
