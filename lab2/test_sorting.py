@@ -1,7 +1,15 @@
 from Sorting import (
     bubbleSort, selectionSort,
-    mergeSort, merge
+    mergeSort, merge, readText
 )
+import pytest
+import sys
+
+
+sys.setrecursionlimit(10000)
+SIZES = [10, 100, 1000]
+FUNCTIONS = [bubbleSort, selectionSort, mergeSort]
+TEXT = readText("lab2/pan-tadeusz.txt", 1000)
 
 
 def test_merge():
@@ -10,13 +18,19 @@ def test_merge():
     assert merge(list1, list2) == [3, 4, 4, 5, 6, 7, 8, 9]
 
 
-def test_bubbleSort(benchmark):
-    assert benchmark(bubbleSort, [6, 5, 4, 8, 3, 4, 9, 7]) == [3, 4, 4, 5, 6, 7, 8, 9]
+def test_readText():
+    assert readText("lab2/pan-tadeusz.txt", 5) == [
+        'Adam', 'Mickiewicz', 'Pan', 'Tadeusz', 'czyli'
+    ]
 
 
-def test_selectionSort(benchmark):
-    assert benchmark(selectionSort, [6, 5, 4, 8, 3, 4, 9, 7]) == [3, 4, 4, 5, 6, 7, 8, 9]
+@pytest.mark.parametrize("func", FUNCTIONS)
+def test_panTadeusz(func):
+    text = readText("lab2/pan-tadeusz.txt", 100)
+    assert func(text) == sorted(text)
 
 
-def test_mergeSort(benchmark):
-    assert benchmark(mergeSort, [6, 5, 4, 8, 3, 4, 9, 7]) == [3, 4, 4, 5, 6, 7, 8, 9]
+@pytest.mark.parametrize("func", FUNCTIONS)
+@pytest.mark.parametrize("size", SIZES)
+def test_benchmark(func, size, benchmark):
+    benchmark(func, TEXT[:size])
