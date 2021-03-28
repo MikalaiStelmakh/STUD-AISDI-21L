@@ -57,3 +57,35 @@ def merge(l, r):
         sorted.append(r[0])
         r.remove(r[0])
     return sorted
+
+
+def quickSort(lst, *args):
+    if len(args) == 0:
+        start, end = 0, len(lst) - 1
+        sorted = lst[:]
+    else:
+        start, end = args
+        sorted = lst
+
+    if start >= end:
+        return
+
+    pivot = sorted[start]
+    i, j = start + 1, end
+
+    while True:
+        while i <= j and sorted[j] >= pivot:
+            j -= 1
+        while i <= j and sorted[i] <= pivot:
+            i += 1
+        if i <= j:
+            sorted[i], sorted[j] = sorted[j], sorted[i]
+        else:
+            break
+
+    sorted[start], sorted[j] = sorted[j], sorted[start]
+
+    quickSort(sorted, start, j-1)
+    quickSort(sorted, j+1, end)
+
+    return sorted
