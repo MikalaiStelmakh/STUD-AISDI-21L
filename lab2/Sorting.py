@@ -9,7 +9,8 @@ def readText(path, size):
         return text
 
 
-def bubbleSort(lst):
+def bubbleSort(value):
+    lst = value.copy()
     sorted = True
     for i in range(len(lst[:-1])):
         if lst[i] > lst[i+1]:
@@ -20,7 +21,8 @@ def bubbleSort(lst):
     return lst
 
 
-def selectionSort(lst):
+def selectionSort(value):
+    lst = value.copy()
     minimum = lst[lst.index(min(lst))]
     lst[lst.index(min(lst))], lst[0] = lst[0], minimum
     if len(lst) > 2:
@@ -28,7 +30,8 @@ def selectionSort(lst):
     return lst
 
 
-def mergeSort(lst):
+def mergeSort(value):
+    lst = value.copy()
     if len(lst) == 1:
         return lst
 
