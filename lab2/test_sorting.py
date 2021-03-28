@@ -6,10 +6,10 @@ import pytest
 import sys
 
 
-sys.setrecursionlimit(10000)
-SIZES = [10, 100, 1000]
+sys.setrecursionlimit(100000)
+SIZES = [2000, 4000, 6000, 8000, 10000]
 FUNCTIONS = [bubbleSort, selectionSort, mergeSort]
-TEXT = readText("lab2/pan-tadeusz.txt", 1000)
+TEXT = readText("lab2/pan-tadeusz.txt", 10000)
 
 
 def test_merge():
@@ -33,4 +33,6 @@ def test_panTadeusz(func):
 @pytest.mark.parametrize("func", FUNCTIONS)
 @pytest.mark.parametrize("size", SIZES)
 def test_benchmark(func, size, benchmark):
+    benchmark.extra_info["func"] = func.__name__
+    benchmark.extra_info["size"] = size
     benchmark(func, TEXT[:size])
