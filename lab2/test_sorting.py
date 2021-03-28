@@ -1,6 +1,6 @@
 from Sorting import (
     bubbleSort, selectionSort,
-    mergeSort, merge, readText
+    mergeSort, quickSort, merge, readText
 )
 import pytest
 import sys
@@ -8,7 +8,7 @@ import sys
 
 sys.setrecursionlimit(100000)
 SIZES = [2000, 4000, 6000, 8000, 10000]
-FUNCTIONS = [bubbleSort, selectionSort, mergeSort]
+FUNCTIONS = [bubbleSort, selectionSort, mergeSort, quickSort]
 TEXT = readText("lab2/pan-tadeusz.txt", 10000)
 
 
