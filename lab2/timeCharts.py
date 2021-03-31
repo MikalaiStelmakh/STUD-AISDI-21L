@@ -39,4 +39,4 @@ if __name__ == '__main__':
     fig, axes = plt.subplots(nrows=2, ncols=2)
     create_chart(info, fig, axes)
     plt.tight_layout()
-    fig.savefig('lab2/fig1.png')
+    fig.savefig('lab2/charts.png')
