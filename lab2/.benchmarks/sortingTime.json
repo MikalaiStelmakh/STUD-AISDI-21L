@@ -1,0 +1,854 @@
+{
+    "machine_info": {
+        "node": "mstelmakh",
+        "processor": "x86_64",
+        "machine": "x86_64",
+        "python_compiler": "GCC 9.3.0",
+        "python_implementation": "CPython",
+        "python_implementation_version": "3.8.5",
+        "python_version": "3.8.5",
+        "python_build": [
+            "default",
+            "Jul 28 2020 12:59:40"
+        ],
+        "release": "4.19.128-microsoft-standard",
+        "system": "Linux",
+        "cpu": {
+            "vendor_id": "unknown",
+            "hardware": "unknown",
+            "brand": "unknown"
+        }
+    },
+    "commit_info": {
+        "id": "74585734818f88a2727c27ab1b925e2e65ecc2e4",
+        "time": "2021-03-28T23:14:20+02:00",
+        "author_time": "2021-03-28T23:14:20+02:00",
+        "dirty": false,
+        "project": "21l_aisdi_lab1",
+        "branch": "master"
+    },
+    "benchmarks": [
+        {
+            "group": null,
+            "name": "test_benchmark[2000-bubbleSort]",
+            "fullname": "lab2/test_sorting.py::test_benchmark[2000-bubbleSort]",
+            "params": {
+                "size": 2000,
+                "func": "UNSERIALIZABLE[<function bubbleSort at 0x7faa918ea310>]"
+            },
+            "param": "2000-bubbleSort",
+            "extra_info": {
+                "func": "bubbleSort",
+                "size": 2000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.7123724999999013,
+                "max": 0.7931430000001001,
+                "mean": 0.7531107199999496,
+                "stddev": 0.03593203947426467,
+                "rounds": 5,
+                "median": 0.7450347000001329,
+                "iqr": 0.06517357500007392,
+                "q1": 0.7237289249998184,
+                "q3": 0.7889024999998924,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.7123724999999013,
+                "hd15iqr": 0.7931430000001001,
+                "ops": 1.3278260067790124,
+                "total": 3.7655535999997483,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_benchmark[2000-selectionSort]",
+            "fullname": "lab2/test_sorting.py::test_benchmark[2000-selectionSort]",
+            "params": {
+                "size": 2000,
+                "func": "UNSERIALIZABLE[<function selectionSort at 0x7faa918ea3a0>]"
+            },
+            "param": "2000-selectionSort",
+            "extra_info": {
+                "func": "selectionSort",
+                "size": 2000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.21111259999997856,
+                "max": 0.24346060000016223,
+                "mean": 0.22146896000008381,
+                "stddev": 0.012778147883379321,
+                "rounds": 5,
+                "median": 0.21685139999999592,
+                "iqr": 0.012368150000099831,
+                "q1": 0.2141076500000736,
+                "q3": 0.22647580000017342,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 0.21111259999997856,
+                "hd15iqr": 0.24346060000016223,
+                "ops": 4.515305440544,
+                "total": 1.1073448000004191,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_benchmark[2000-mergeSort]",
+            "fullname": "lab2/test_sorting.py::test_benchmark[2000-mergeSort]",
+            "params": {
+                "size": 2000,
+                "func": "UNSERIALIZABLE[<function mergeSort at 0x7faa918ea430>]"
+            },
+            "param": "2000-mergeSort",
+            "extra_info": {
+                "func": "mergeSort",
+                "size": 2000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.00852190000000519,
+                "max": 0.013797199999999066,
+                "mean": 0.009249270535714718,
+                "stddev": 0.000855687811714504,
+                "rounds": 112,
+                "median": 0.008971199999905366,
+                "iqr": 0.0007107999999789172,
+                "q1": 0.00874145000000226,
+                "q3": 0.009452249999981177,
+                "iqr_outliers": 7,
+                "stddev_outliers": 14,
+                "outliers": "14;7",
+                "ld15iqr": 0.00852190000000519,
+                "hd15iqr": 0.010625799999843366,
+                "ops": 108.11663429441758,
+                "total": 1.0359183000000485,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_benchmark[2000-quickSort]",
+            "fullname": "lab2/test_sorting.py::test_benchmark[2000-quickSort]",
+            "params": {
+                "size": 2000,
+                "func": "UNSERIALIZABLE[<function quickSort at 0x7faa918ea550>]"
+            },
+            "param": "2000-quickSort",
+            "extra_info": {
+                "func": "quickSort",
+                "size": 2000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.005927999999812528,
+                "max": 0.009146699999973862,
+                "mean": 0.006270369426751143,
+                "stddev": 0.0004264158707474251,
+                "rounds": 157,
+                "median": 0.006148400000029142,
+                "iqr": 0.0002994999998691128,
+                "q1": 0.006033200000103989,
+                "q3": 0.0063326999999731015,
+                "iqr_outliers": 12,
+                "stddev_outliers": 13,
+                "outliers": "13;12",
+                "ld15iqr": 0.005927999999812528,
+                "hd15iqr": 0.006855399999949441,
+                "ops": 159.4802366402403,
+                "total": 0.9844479999999294,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_benchmark[4000-bubbleSort]",
+            "fullname": "lab2/test_sorting.py::test_benchmark[4000-bubbleSort]",
+            "params": {
+                "size": 4000,
+                "func": "UNSERIALIZABLE[<function bubbleSort at 0x7faa918ea310>]"
+            },
+            "param": "4000-bubbleSort",
+            "extra_info": {
+                "func": "bubbleSort",
+                "size": 4000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 2.9596637999998165,
+                "max": 3.0640776999998707,
+                "mean": 3.0048463599999193,
+                "stddev": 0.04258242916582781,
+                "rounds": 5,
+                "median": 3.013063699999975,
+                "iqr": 0.06561677500025098,
+                "q1": 2.965444274999811,
+                "q3": 3.031061050000062,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 2.9596637999998165,
+                "hd15iqr": 3.0640776999998707,
+                "ops": 0.33279571738237784,
+                "total": 15.024231799999598,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_benchmark[4000-selectionSort]",
+            "fullname": "lab2/test_sorting.py::test_benchmark[4000-selectionSort]",
+            "params": {
+                "size": 4000,
+                "func": "UNSERIALIZABLE[<function selectionSort at 0x7faa918ea3a0>]"
+            },
+            "param": "4000-selectionSort",
+            "extra_info": {
+                "func": "selectionSort",
+                "size": 4000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.9499121999999716,
+                "max": 0.9800861999999597,
+                "mean": 0.9661184799999774,
+                "stddev": 0.012536906064567883,
+                "rounds": 5,
+                "median": 0.9689513999999235,
+                "iqr": 0.021074849999990874,
+                "q1": 0.955078350000008,
+                "q3": 0.9761531999999988,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.9499121999999716,
+                "hd15iqr": 0.9800861999999597,
+                "ops": 1.0350697359603591,
+                "total": 4.830592399999887,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_benchmark[4000-mergeSort]",
+            "fullname": "lab2/test_sorting.py::test_benchmark[4000-mergeSort]",
+            "params": {
+                "size": 4000,
+                "func": "UNSERIALIZABLE[<function mergeSort at 0x7faa918ea430>]"
+            },
+            "param": "4000-mergeSort",
+            "extra_info": {
+                "func": "mergeSort",
+                "size": 4000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0188274999998157,
+                "max": 0.020171500000060405,
+                "mean": 0.019334521568618014,
+                "stddev": 0.0003558668989018061,
+                "rounds": 51,
+                "median": 0.019280400000070586,
+                "iqr": 0.0004703999999833286,
+                "q1": 0.019057649999979276,
+                "q3": 0.019528049999962604,
+                "iqr_outliers": 0,
+                "stddev_outliers": 16,
+                "outliers": "16;0",
+                "ld15iqr": 0.0188274999998157,
+                "hd15iqr": 0.020171500000060405,
+                "ops": 51.720959137830775,
+                "total": 0.9860605999995187,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_benchmark[4000-quickSort]",
+            "fullname": "lab2/test_sorting.py::test_benchmark[4000-quickSort]",
+            "params": {
+                "size": 4000,
+                "func": "UNSERIALIZABLE[<function quickSort at 0x7faa918ea550>]"
+            },
+            "param": "4000-quickSort",
+            "extra_info": {
+                "func": "quickSort",
+                "size": 4000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.012849700000060693,
+                "max": 0.014874799999915922,
+                "mean": 0.013220539999999044,
+                "stddev": 0.0003272096422793142,
+                "rounds": 75,
+                "median": 0.013165500000013708,
+                "iqr": 0.00025525000006609844,
+                "q1": 0.013011149999897498,
+                "q3": 0.013266399999963596,
+                "iqr_outliers": 7,
+                "stddev_outliers": 10,
+                "outliers": "10;7",
+                "ld15iqr": 0.012849700000060693,
+                "hd15iqr": 0.013694800000166651,
+                "ops": 75.6398755270263,
+                "total": 0.9915404999999282,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_benchmark[6000-bubbleSort]",
+            "fullname": "lab2/test_sorting.py::test_benchmark[6000-bubbleSort]",
+            "params": {
+                "size": 6000,
+                "func": "UNSERIALIZABLE[<function bubbleSort at 0x7faa918ea310>]"
+            },
+            "param": "6000-bubbleSort",
+            "extra_info": {
+                "func": "bubbleSort",
+                "size": 6000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 6.890109200000097,
+                "max": 7.046445300000187,
+                "mean": 6.971899640000129,
+                "stddev": 0.07501507767875393,
+                "rounds": 5,
+                "median": 6.974033100000042,
+                "iqr": 0.14643992499998149,
+                "q1": 6.899690825000164,
+                "q3": 7.046130750000145,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 6.890109200000097,
+                "hd15iqr": 7.046445300000187,
+                "ops": 0.14343293099956061,
+                "total": 34.859498200000644,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_benchmark[6000-selectionSort]",
+            "fullname": "lab2/test_sorting.py::test_benchmark[6000-selectionSort]",
+            "params": {
+                "size": 6000,
+                "func": "UNSERIALIZABLE[<function selectionSort at 0x7faa918ea3a0>]"
+            },
+            "param": "6000-selectionSort",
+            "extra_info": {
+                "func": "selectionSort",
+                "size": 6000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 2.3192653000000973,
+                "max": 2.8771559000001616,
+                "mean": 2.5084080399999946,
+                "stddev": 0.2404468900103026,
+                "rounds": 5,
+                "median": 2.398879199999783,
+                "iqr": 0.3646150000000148,
+                "q1": 2.3222725749999995,
+                "q3": 2.6868875750000143,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 2.3192653000000973,
+                "hd15iqr": 2.8771559000001616,
+                "ops": 0.3986592229229189,
+                "total": 12.542040199999974,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_benchmark[6000-mergeSort]",
+            "fullname": "lab2/test_sorting.py::test_benchmark[6000-mergeSort]",
+            "params": {
+                "size": 6000,
+                "func": "UNSERIALIZABLE[<function mergeSort at 0x7faa918ea430>]"
+            },
+            "param": "6000-mergeSort",
+            "extra_info": {
+                "func": "mergeSort",
+                "size": 6000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.03083480000009331,
+                "max": 0.03357600000003913,
+                "mean": 0.03177616250000881,
+                "stddev": 0.000734632613350776,
+                "rounds": 32,
+                "median": 0.031588349999992715,
+                "iqr": 0.0009497500000179571,
+                "q1": 0.03121529999998529,
+                "q3": 0.03216505000000325,
+                "iqr_outliers": 0,
+                "stddev_outliers": 9,
+                "outliers": "9;0",
+                "ld15iqr": 0.03083480000009331,
+                "hd15iqr": 0.03357600000003913,
+                "ops": 31.47013110849124,
+                "total": 1.0168372000002819,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_benchmark[6000-quickSort]",
+            "fullname": "lab2/test_sorting.py::test_benchmark[6000-quickSort]",
+            "params": {
+                "size": 6000,
+                "func": "UNSERIALIZABLE[<function quickSort at 0x7faa918ea550>]"
+            },
+            "param": "6000-quickSort",
+            "extra_info": {
+                "func": "quickSort",
+                "size": 6000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.02198879999991732,
+                "max": 0.02752880000002733,
+                "mean": 0.022898957142859087,
+                "stddev": 0.0010256415596333276,
+                "rounds": 42,
+                "median": 0.022602450000022145,
+                "iqr": 0.0006831000002875953,
+                "q1": 0.022281699999894045,
+                "q3": 0.02296480000018164,
+                "iqr_outliers": 5,
+                "stddev_outliers": 5,
+                "outliers": "5;5",
+                "ld15iqr": 0.02198879999991732,
+                "hd15iqr": 0.024008800000046904,
+                "ops": 43.67011099070267,
+                "total": 0.9617562000000817,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_benchmark[8000-bubbleSort]",
+            "fullname": "lab2/test_sorting.py::test_benchmark[8000-bubbleSort]",
+            "params": {
+                "size": 8000,
+                "func": "UNSERIALIZABLE[<function bubbleSort at 0x7faa918ea310>]"
+            },
+            "param": "8000-bubbleSort",
+            "extra_info": {
+                "func": "bubbleSort",
+                "size": 8000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 12.808328099999926,
+                "max": 13.172535399999788,
+                "mean": 12.905446999999958,
+                "stddev": 0.15791372810226847,
+                "rounds": 5,
+                "median": 12.809948000000077,
+                "iqr": 0.18033459999998058,
+                "q1": 12.808599449999974,
+                "q3": 12.988934049999955,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 12.808328099999926,
+                "hd15iqr": 13.172535399999788,
+                "ops": 0.0774866612524156,
+                "total": 64.52723499999979,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_benchmark[8000-selectionSort]",
+            "fullname": "lab2/test_sorting.py::test_benchmark[8000-selectionSort]",
+            "params": {
+                "size": 8000,
+                "func": "UNSERIALIZABLE[<function selectionSort at 0x7faa918ea3a0>]"
+            },
+            "param": "8000-selectionSort",
+            "extra_info": {
+                "func": "selectionSort",
+                "size": 8000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 4.257064700000001,
+                "max": 4.462593500000139,
+                "mean": 4.347647360000019,
+                "stddev": 0.0948197771175484,
+                "rounds": 5,
+                "median": 4.306015099999968,
+                "iqr": 0.17073817499993993,
+                "q1": 4.271799500000043,
+                "q3": 4.442537674999983,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 4.257064700000001,
+                "hd15iqr": 4.462593500000139,
+                "ops": 0.2300094550446694,
+                "total": 21.738236800000095,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_benchmark[8000-mergeSort]",
+            "fullname": "lab2/test_sorting.py::test_benchmark[8000-mergeSort]",
+            "params": {
+                "size": 8000,
+                "func": "UNSERIALIZABLE[<function mergeSort at 0x7faa918ea430>]"
+            },
+            "param": "8000-mergeSort",
+            "extra_info": {
+                "func": "mergeSort",
+                "size": 8000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.04302780000011808,
+                "max": 0.046337200000152734,
+                "mean": 0.04430470434784223,
+                "stddev": 0.0008415603249030981,
+                "rounds": 23,
+                "median": 0.044231900000113455,
+                "iqr": 0.0010348499997689942,
+                "q1": 0.04367637500007504,
+                "q3": 0.044711224999844035,
+                "iqr_outliers": 1,
+                "stddev_outliers": 5,
+                "outliers": "5;1",
+                "ld15iqr": 0.04302780000011808,
+                "hd15iqr": 0.046337200000152734,
+                "ops": 22.57096655354846,
+                "total": 1.0190082000003713,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_benchmark[8000-quickSort]",
+            "fullname": "lab2/test_sorting.py::test_benchmark[8000-quickSort]",
+            "params": {
+                "size": 8000,
+                "func": "UNSERIALIZABLE[<function quickSort at 0x7faa918ea550>]"
+            },
+            "param": "8000-quickSort",
+            "extra_info": {
+                "func": "quickSort",
+                "size": 8000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.03221320000011474,
+                "max": 0.039999500000021726,
+                "mean": 0.033780835483874457,
+                "stddev": 0.0016474812428963058,
+                "rounds": 31,
+                "median": 0.0334327000000485,
+                "iqr": 0.0014608749999638349,
+                "q1": 0.03278812500002459,
+                "q3": 0.03424899999998843,
+                "iqr_outliers": 2,
+                "stddev_outliers": 2,
+                "outliers": "2;2",
+                "ld15iqr": 0.03221320000011474,
+                "hd15iqr": 0.03833559999998215,
+                "ops": 29.60258340790173,
+                "total": 1.0472059000001082,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_benchmark[10000-bubbleSort]",
+            "fullname": "lab2/test_sorting.py::test_benchmark[10000-bubbleSort]",
+            "params": {
+                "size": 10000,
+                "func": "UNSERIALIZABLE[<function bubbleSort at 0x7faa918ea310>]"
+            },
+            "param": "10000-bubbleSort",
+            "extra_info": {
+                "func": "bubbleSort",
+                "size": 10000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 19.7350821,
+                "max": 20.47217499999988,
+                "mean": 19.995527779999975,
+                "stddev": 0.2859379474937505,
+                "rounds": 5,
+                "median": 19.970935499999996,
+                "iqr": 0.305465799999979,
+                "q1": 19.797966599999995,
+                "q3": 20.103432399999974,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 19.7350821,
+                "hd15iqr": 20.47217499999988,
+                "ops": 0.050011183050653205,
+                "total": 99.97763889999987,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_benchmark[10000-selectionSort]",
+            "fullname": "lab2/test_sorting.py::test_benchmark[10000-selectionSort]",
+            "params": {
+                "size": 10000,
+                "func": "UNSERIALIZABLE[<function selectionSort at 0x7faa918ea3a0>]"
+            },
+            "param": "10000-selectionSort",
+            "extra_info": {
+                "func": "selectionSort",
+                "size": 10000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 6.8600856999999,
+                "max": 7.329047400000036,
+                "mean": 7.012839179999991,
+                "stddev": 0.1894781739405132,
+                "rounds": 5,
+                "median": 6.929097899999988,
+                "iqr": 0.22381924999984903,
+                "q1": 6.891468850000081,
+                "q3": 7.11528809999993,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 6.8600856999999,
+                "hd15iqr": 7.329047400000036,
+                "ops": 0.14259559849196501,
+                "total": 35.06419589999996,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_benchmark[10000-mergeSort]",
+            "fullname": "lab2/test_sorting.py::test_benchmark[10000-mergeSort]",
+            "params": {
+                "size": 10000,
+                "func": "UNSERIALIZABLE[<function mergeSort at 0x7faa918ea430>]"
+            },
+            "param": "10000-mergeSort",
+            "extra_info": {
+                "func": "mergeSort",
+                "size": 10000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.057860599999912665,
+                "max": 0.06265329999996538,
+                "mean": 0.059022983333344804,
+                "stddev": 0.0011304561485524563,
+                "rounds": 18,
+                "median": 0.05866114999992078,
+                "iqr": 0.0007597999999688909,
+                "q1": 0.058419899999989866,
+                "q3": 0.05917969999995876,
+                "iqr_outliers": 1,
+                "stddev_outliers": 3,
+                "outliers": "3;1",
+                "ld15iqr": 0.057860599999912665,
+                "hd15iqr": 0.06265329999996538,
+                "ops": 16.942552604504723,
+                "total": 1.0624137000002065,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_benchmark[10000-quickSort]",
+            "fullname": "lab2/test_sorting.py::test_benchmark[10000-quickSort]",
+            "params": {
+                "size": 10000,
+                "func": "UNSERIALIZABLE[<function quickSort at 0x7faa918ea550>]"
+            },
+            "param": "10000-quickSort",
+            "extra_info": {
+                "func": "quickSort",
+                "size": 10000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.043331599999874015,
+                "max": 0.044440200000053665,
+                "mean": 0.04392494347825959,
+                "stddev": 0.00031716265808978873,
+                "rounds": 23,
+                "median": 0.04400020000002769,
+                "iqr": 0.0004144499999938489,
+                "q1": 0.04373167499994679,
+                "q3": 0.04414612499994064,
+                "iqr_outliers": 0,
+                "stddev_outliers": 7,
+                "outliers": "7;0",
+                "ld15iqr": 0.043331599999874015,
+                "hd15iqr": 0.044440200000053665,
+                "ops": 22.76610783790637,
+                "total": 1.0102736999999706,
+                "iterations": 1
+            }
+        }
+    ],
+    "datetime": "2021-03-28T21:21:58.705076",
+    "version": "3.2.3"
+}
