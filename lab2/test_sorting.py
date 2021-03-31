@@ -24,15 +24,14 @@ def test_readText():
     ]
 
 
-@pytest.mark.parametrize("func", FUNCTIONS)
-def test_panTadeusz(func):
-    text = readText("lab2/pan-tadeusz.txt", 100)
-    assert func(text) == sorted(text)
+@pytest.mark.parametrize("function", FUNCTIONS)
+def test_sort(function):
+    assert function(TEXT[:5000]) == sorted(TEXT[:5000])
 
 
-@pytest.mark.parametrize("func", FUNCTIONS)
+@pytest.mark.parametrize("function", FUNCTIONS)
 @pytest.mark.parametrize("size", SIZES)
-def test_benchmark(func, size, benchmark):
-    benchmark.extra_info["func"] = func.__name__
+def test_sortTime(function, size, benchmark):
+    benchmark.extra_info["func"] = function.__name__
     benchmark.extra_info["size"] = size
-    benchmark(func, TEXT[:size])
+    benchmark(function, TEXT[:size])
