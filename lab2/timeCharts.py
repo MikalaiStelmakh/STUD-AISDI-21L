@@ -17,23 +17,26 @@ def read_from_json(path):
     return info
 
 
-def create_chart(info):
-    fig, axes = plt.subplots(nrows=len(info))
-    for sortingAlgorithm, ax in zip(info, axes):
-        sizes = []
-        times = []
-        for size in info[sortingAlgorithm]:
-            sizes.append(size)
-            times.append(info[sortingAlgorithm][size] * 10**3)
-        ax.plot(sizes, times)
-        ax.set_title(sortingAlgorithm)
-        ax.set_xlabel('Number of words')
-        ax.set_ylabel('Time [ms]')
+def create_chart(info, fig, axes):
+    for axl in axes:
+        for sortingAlgorithm, ax in zip(info, axl):
+            sizes = []
+            times = []
+            for size in info[sortingAlgorithm]:
+                sizes.append(size)
+                times.append(info[sortingAlgorithm][size] * 10**3)
+            ax.plot(sizes, times)
+            ax.set_title(sortingAlgorithm)
+            ax.set_xlabel('Number of words')
+            ax.set_ylabel('Time [ms]')
+        for counter in range(len(axl)):
+            del info[next(iter(info))]
 
 
 if __name__ == '__main__':
     plt.style.use('seaborn')
     info = read_from_json('lab2/.benchmarks/sortingTime.json')
-    create_chart(info)
+    fig, axes = plt.subplots(nrows=2, ncols=2)
+    create_chart(info, fig, axes)
     plt.tight_layout()
-    plt.show()
+    fig.savefig('lab2/fig1.png')
