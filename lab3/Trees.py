@@ -1,17 +1,121 @@
-class TreeNode(object):
+class TreeNode:
     def __init__(self, val):
         self.val = val
         self.left = None
         self.right = None
         self.height = 1
 
+    def insert_list(self, numbers):
+        for number in numbers:
+            self.insert(number)
 
-class AVLTree(object):
+    def search_list(self, numbers):
+        return [self.search(number) for number in numbers]
+
+    def search(self, val):
+        if self.root is None:
+            return None
+        return self.findNode(self.root, val)
+
+    def findNode(self, currentNode, val):
+        if val == currentNode.val:
+            return currentNode
+        elif val < currentNode.val and currentNode.left is not None:
+            return self.findNode(currentNode.left, val)
+        elif val > currentNode.val and currentNode.right is not None:
+            return self.findNode(currentNode.right, val)
+        else:
+            return None
+
+    def delete_list(self, numbers):
+        return [self.delete(number) for number in numbers]
+
+    def printTree(self):
+        self._print(self.root)
+
+    def _print(self, node, level=0):
+        if node is not None:
+            self._print(node.right, level + 1)
+            print('\t' * level + '->', node.val)
+            self._print(node.left, level + 1)
+
+
+class BST(TreeNode):
+    def __init__(self, val=None):
+        super().__init__(val)
+        self.root = None
+
+    def insert_list(self, numbers):
+        return super().insert_list(numbers)
+
+    def insert(self, val):
+        if not self.val:
+            self.val = val
+            self.root = self
+            return
+
+        if self.val == val:
+            return
+
+        if val < self.val:
+            if self.left:
+                self.left.insert(val)
+                return
+            self.left = BST(val)
+            return
+
+        if self.right:
+            self.right.insert(val)
+            return
+        self.right = BST(val)
+
+    def get_min(self):
+        current = self
+        while current.left is not None:
+            current = current.left
+        return current.val
+
+    def delete_list(self, numbers):
+        return super().delete_list(numbers)
+
+    def delete(self, val):
+        if self is None:
+            return self
+        if val < self.val:
+            if self.left:
+                self.left = self.left.delete(val)
+            return self
+        if val > self.val:
+            if self.right:
+                self.right = self.right.delete(val)
+            return self
+        if self.right is None:
+            return self.left
+        if self.left is None:
+            return self.right
+        min_larger_node = self.right
+        while min_larger_node.left:
+            min_larger_node = min_larger_node.left
+        self.val = min_larger_node.val
+        self.right = self.right.delete(min_larger_node.val)
+        return self
+
+    def search_list(self, numbers):
+        return super().search_list(numbers)
+
+    def printTree(self):
+        return super().printTree()
+
+
+class AVLTree(TreeNode):
     def __init__(self, values=None):
         self.root = None
         if values is not None:
             for value in values:
                 self.root = self._insert(self.root, value)
+
+    def insert_list(self, numbers):
+        return super().insert_list(numbers)
 
     def insert(self, key):
         self.root = self._insert(self.root, key)
@@ -43,7 +147,10 @@ class AVLTree(object):
             return self.leftRotate(root)
 
         return root
-    
+
+    def delete_list(self, numbers):
+        return super().delete_list(numbers)
+
     def delete(self, key):
         return self._delete(self.root, key)
 
@@ -95,20 +202,8 @@ class AVLTree(object):
 
         return root
 
-    def findNode(self, val):
-        if self.root is None:
-            return None
-        return self._findNode(self.root, val)
-
-    def _findNode(self, currentNode, val):
-        if val == currentNode.val:
-            return currentNode
-        elif val < currentNode.val and currentNode.left is not None:
-            return self._findNode(currentNode.left, val)
-        elif val > currentNode.val and currentNode.right is not None:
-            return self._findNode(currentNode.right, val)
-        else:
-            return None
+    def search_list(self, numbers):
+        return super().search_list(numbers)
 
     def leftRotate(self, z):
         y = z.right
@@ -151,10 +246,20 @@ class AVLTree(object):
         return self.getHeight(root.left) - self.getHeight(root.right)
 
     def printTree(self):
-        self._print(self.root)
+        return super().printTree()
 
-    def _print(self, node, level=0):
-        if node is not None:
-            self._print(node.left, level + 1)
-            print('\t' * level + '->', node.val)
-            self._print(node.right, level + 1)
+
+if __name__ == '__main__':
+    tree = AVLTree([])
+    tree.insert_list([10, 20, 30, 5, 40, 50])
+    tree.insert_list([15, 25])
+    tree.delete_list([20, 30])
+    print(tree.search_list([10, 15]))
+    tree.printTree()
+    print('-------------------------------------')
+    bst = BST()
+    bst.insert_list([10, 20, 30, 5, 40, 50])
+    bst.insert_list([15, 25])
+    bst.delete_list([20, 30])
+    print(bst.search_list([10, 15]))
+    bst._print(bst)
