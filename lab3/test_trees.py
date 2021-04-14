@@ -31,6 +31,11 @@ def test_init_3():
     assert avltree.root.val == 4
 
 
+def test_init_bst_1():
+    bsttree = BST()
+    assert bsttree.root is None
+
+
 def test_insert_find_1():
     avltree = AVLTree([1, 2, 3, 4])
     avltree.insert(5)
@@ -43,6 +48,12 @@ def test_insert_find_2():
     assert avltree.search(2.5).val == 2.5
 
 
+def test_insert_find_bst_1():
+    bsttree = BST([1, 2, 3, 4])
+    bsttree.insert(5)
+    assert bsttree.search(5).val == 5
+
+    
 def test_delete_1():
     avltree = AVLTree([1, 2, 3, 4])
     avltree.delete(2)
