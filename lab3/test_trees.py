@@ -10,10 +10,10 @@ NUMBERS = random.sample(range(1, 30001), 10000)
 SIZES = [1000, 2000, 4000, 6000, 8000, 10000]
 
 FILLED_TREES = []
-AVL = AVLTree(NUMBERS)
-BST = BST()
-BST.insert_list(NUMBERS)
-FILLED_TREES = [BST, AVL]
+AVL_FILLED = AVLTree(NUMBERS)
+BST_FILLED = BST()
+BST_FILLED.insert_list(NUMBERS)
+FILLED_TREES = [BST_FILLED, AVL_FILLED]
 
 
 def test_init_1():
@@ -83,20 +83,23 @@ def test_insertTimeAVL(size, benchmark):
     benchmark(AVLTree, NUMBERS[:size])
 
 
-# @pytest.mark.parametrize('size', SIZES)
-# def test_insertTimeBST(size, benchmark):
-#     benchmark.extra_info["function"] = "insertTime"
-#     benchmark.extra_info["tree"] = "BST"
-#     benchmark.extra_info["size"] = size
-#     bst = BST()
-#     benchmark(bst.insert_list, NUMBERS[:size])
+@pytest.mark.parametrize('size', SIZES)
+def test_insertTimeBST(size, benchmark):
+    benchmark.extra_info["function"] = "insertTime"
+    benchmark.extra_info["tree"] = "BST"
+    benchmark.extra_info["size"] = size
+    bst = BST()
+    benchmark(bst.insert_list, NUMBERS[:size])
 
 
 @pytest.mark.parametrize("tree", FILLED_TREES)
 @pytest.mark.parametrize("size", SIZES)
 def test_searchTime(tree, size, benchmark):
     benchmark.extra_info["function"] = "searchTime"
-    benchmark.extra_info["tree"] = tree
+    if str(tree.__class__) == "<class 'Trees.BST'>":
+        benchmark.extra_info["tree"] = 'BST'
+    else:
+        benchmark.extra_info["tree"] = 'AVL'
     benchmark.extra_info["size"] = size
     benchmark(tree.search_list, NUMBERS[:size])
 
@@ -105,7 +108,10 @@ def test_searchTime(tree, size, benchmark):
 @pytest.mark.parametrize("size", SIZES)
 def test_deleteTime(tree, size, benchmark):
     benchmark.extra_info["function"] = "deleteTime"
-    benchmark.extra_info["tree"] = tree
+    if str(tree.__class__) == "<class 'Trees.BST'>":
+        benchmark.extra_info["tree"] = 'BST'
+    else:
+        benchmark.extra_info["tree"] = 'AVL'
     benchmark.extra_info["size"] = size
     new_tree = copy.deepcopy(tree)
     benchmark(new_tree.delete_list, NUMBERS[:size])
