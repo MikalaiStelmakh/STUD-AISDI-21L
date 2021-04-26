@@ -1,6 +1,5 @@
-from heap import Node, Heap
+from heap import Heap
 import pytest
-import sys
 import random
 import copy
 
@@ -15,33 +14,33 @@ for heap in FILLED_HEAPS:
 ids = [2, 3, 4]
 
 
-# @pytest.mark.parametrize("dimension", DIMENSIONS)
-# @pytest.mark.parametrize("size", SIZES)
-# def test_push_n_elements_time(dimension, size, benchmark):
-#     """Benchmark pushing {size} number of elements
-#     to {dimension}-ary heap."""
-#     def func():
-#         heap = Heap(dimension=dimension)
-#         heap.push(NUMBERS[:size])
-#     benchmark.extra_info["size"] = size
-#     benchmark.extra_info["dimension"] = dimension
-#     benchmark.extra_info["function"] = "push"
-#     benchmark.pedantic(func, rounds=BENCHMARK_ROUNDS)
+@pytest.mark.parametrize("dimension", DIMENSIONS)
+@pytest.mark.parametrize("size", SIZES)
+def test_push_n_elements_time(dimension, size, benchmark):
+    """Benchmark pushing {size} number of elements
+    to {dimension}-ary heap."""
+    def func():
+        heap = Heap(dimension=dimension)
+        heap.push(NUMBERS[:size])
+    benchmark.extra_info["function"] = "push"
+    benchmark.extra_info["dimension"] = dimension
+    benchmark.extra_info["size"] = size
+    benchmark.pedantic(func, rounds=BENCHMARK_ROUNDS)
 
 
-# @pytest.mark.parametrize("heap", FILLED_HEAPS, ids=ids)
-# @pytest.mark.parametrize("size", SIZES)
-# def test_pop_n_times_time(heap, size, benchmark):
-#     """Benchmark pop the topmost element {size} times
-#     from {dimension}-ary heap."""
-#     def func():
-#         heapCopy = copy.deepcopy(heap)
-#         for _ in range(size):
-#             heapCopy.pop()
-#     benchmark.extra_info["size"] = size
-#     benchmark.extra_info["dimension"] = dimension
-#     benchmark.extra_info["function"] = "pop_n_times"
-#     benchmark.pedantic(func, rounds=BENCHMARK_ROUNDS)
+@pytest.mark.parametrize("heap, dimension", zip(FILLED_HEAPS, DIMENSIONS), ids=ids)
+@pytest.mark.parametrize("size", SIZES)
+def test_pop_n_times_time(heap, dimension, size, benchmark):
+    """Benchmark pop the topmost element {size} times
+    from {dimension}-ary heap."""
+    def func():
+        heapCopy = copy.deepcopy(heap)
+        for _ in range(size):
+            heapCopy.pop()
+    benchmark.extra_info["function"] = "pop_n_times"
+    benchmark.extra_info["dimension"] = dimension
+    benchmark.extra_info["size"] = size
+    benchmark.pedantic(func, rounds=BENCHMARK_ROUNDS)
 
 
 @pytest.mark.parametrize("heap, dimension", zip(FILLED_HEAPS, DIMENSIONS), ids=ids)
@@ -53,7 +52,7 @@ def test_pop_n_times_method_time(heap, dimension, size, benchmark):
     def func():
         heapCopy = copy.deepcopy(heap)
         heapCopy.pop_n_times(size)
-    benchmark.extra_info["size"] = size
-    benchmark.extra_info["dimension"] = dimension
     benchmark.extra_info["function"] = "pop_n_times_method"
+    benchmark.extra_info["dimension"] = dimension
+    benchmark.extra_info["size"] = size
     benchmark.pedantic(func, rounds=BENCHMARK_ROUNDS)
