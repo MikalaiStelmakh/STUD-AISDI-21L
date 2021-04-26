@@ -73,6 +73,12 @@ class Heap(AbstractHeap):
         self.heapify(0)
         return deleted_node
 
+    def pop_n_times(self, number_of_repetitions):
+        """Same as using pop function n times.
+        Much more efficient when removing a large number of elements."""
+        del self.data[:number_of_repetitions]
+        self.heapify(0)
+
     def get_raw_data(self):
         return self.data
 
@@ -97,4 +103,4 @@ if __name__ == '__main__':
     print('------------------------')
     print(heap.peek().val)
     print(len(heap))
-    # heap.printTree()
+    heap.printTree()
