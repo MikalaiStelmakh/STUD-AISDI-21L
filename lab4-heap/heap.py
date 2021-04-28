@@ -14,7 +14,7 @@ class Heap(AbstractHeap):
         # Follow the path to the root, moving parents down until finding
         # a place newitem fits.
         while pos > startpos:
-            parentpos = (pos - 1) >> 1
+            parentpos = (pos - 1) // 2
             parent = self._data[parentpos]
             if newitem < parent:
                 self._data[pos] = parent
