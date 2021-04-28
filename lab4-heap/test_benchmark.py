@@ -39,7 +39,7 @@ def test_pop_n_times_time(heap, dimension, size, benchmark):
         heapCopy = copy.deepcopy(heap)
         for _ in range(size):
             heapCopy.pop()
-    benchmark.extra_info["function"] = "pop_n_times"
+    benchmark.extra_info["function"] = "pop"
     benchmark.extra_info["dimension"] = dimension
     benchmark.extra_info["size"] = size
     benchmark.pedantic(func, rounds=BENCHMARK_ROUNDS)
