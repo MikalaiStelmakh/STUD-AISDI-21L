@@ -1,0 +1,1564 @@
+{
+    "machine_info": {
+        "node": "mstelmakh",
+        "processor": "x86_64",
+        "machine": "x86_64",
+        "python_compiler": "GCC 9.3.0",
+        "python_implementation": "CPython",
+        "python_implementation_version": "3.8.5",
+        "python_version": "3.8.5",
+        "python_build": [
+            "default",
+            "Jul 28 2020 12:59:40"
+        ],
+        "release": "4.19.128-microsoft-standard",
+        "system": "Linux",
+        "cpu": {
+            "vendor_id": "unknown",
+            "hardware": "unknown",
+            "brand": "unknown"
+        }
+    },
+    "commit_info": {
+        "id": "0f65fc05eed6a56761de4cbb5818dd991b3d8636",
+        "time": "2021-04-28T20:30:08+02:00",
+        "author_time": "2021-04-28T20:30:08+02:00",
+        "dirty": true,
+        "project": "21l_aisdi_lab1",
+        "branch": "master"
+    },
+    "benchmarks": [
+        {
+            "group": null,
+            "name": "test_push_n_elements_time[1000-2]",
+            "fullname": "lab4-heap/test_benchmark.py::test_push_n_elements_time[1000-2]",
+            "params": {
+                "size": 1000,
+                "dimension": 2
+            },
+            "param": "1000-2",
+            "extra_info": {
+                "function": "push",
+                "dimension": 2,
+                "size": 1000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0008717000000615371,
+                "max": 0.0010005999993154546,
+                "mean": 0.0008958200000051874,
+                "stddev": 2.8599385174079587e-05,
+                "rounds": 20,
+                "median": 0.0008926499999688531,
+                "iqr": 2.2149999949760968e-05,
+                "q1": 0.0008784500000729167,
+                "q3": 0.0009006000000226777,
+                "iqr_outliers": 1,
+                "stddev_outliers": 2,
+                "outliers": "2;1",
+                "ld15iqr": 0.0008717000000615371,
+                "hd15iqr": 0.0010005999993154546,
+                "ops": 1116.2956843944198,
+                "total": 0.01791640000010375,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_push_n_elements_time[1000-3]",
+            "fullname": "lab4-heap/test_benchmark.py::test_push_n_elements_time[1000-3]",
+            "params": {
+                "size": 1000,
+                "dimension": 3
+            },
+            "param": "1000-3",
+            "extra_info": {
+                "function": "push",
+                "dimension": 3,
+                "size": 1000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0008483000001433538,
+                "max": 0.0010765999995783204,
+                "mean": 0.0008961350000845414,
+                "stddev": 5.449598019371159e-05,
+                "rounds": 20,
+                "median": 0.0008744000001570384,
+                "iqr": 2.7750000299420208e-05,
+                "q1": 0.000868499999796768,
+                "q3": 0.0008962500000961882,
+                "iqr_outliers": 3,
+                "stddev_outliers": 2,
+                "outliers": "2;3",
+                "ld15iqr": 0.0008483000001433538,
+                "hd15iqr": 0.0009396000004926464,
+                "ops": 1115.9032957151098,
+                "total": 0.017922700001690828,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_push_n_elements_time[1000-4]",
+            "fullname": "lab4-heap/test_benchmark.py::test_push_n_elements_time[1000-4]",
+            "params": {
+                "size": 1000,
+                "dimension": 4
+            },
+            "param": "1000-4",
+            "extra_info": {
+                "function": "push",
+                "dimension": 4,
+                "size": 1000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0008589999997639097,
+                "max": 0.0010118999998667277,
+                "mean": 0.0009005499999602762,
+                "stddev": 3.562235404579807e-05,
+                "rounds": 20,
+                "median": 0.0008880499999577296,
+                "iqr": 3.725000033227843e-05,
+                "q1": 0.0008754499995120568,
+                "q3": 0.0009126999998443353,
+                "iqr_outliers": 1,
+                "stddev_outliers": 3,
+                "outliers": "3;1",
+                "ld15iqr": 0.0008589999997639097,
+                "hd15iqr": 0.0010118999998667277,
+                "ops": 1110.4325135129761,
+                "total": 0.018010999999205524,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_push_n_elements_time[2000-2]",
+            "fullname": "lab4-heap/test_benchmark.py::test_push_n_elements_time[2000-2]",
+            "params": {
+                "size": 2000,
+                "dimension": 2
+            },
+            "param": "2000-2",
+            "extra_info": {
+                "function": "push",
+                "dimension": 2,
+                "size": 2000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0017965999995794846,
+                "max": 0.0024466000004395028,
+                "mean": 0.001881974999923841,
+                "stddev": 0.00013702470355093926,
+                "rounds": 20,
+                "median": 0.001850849999300408,
+                "iqr": 2.8699999802483944e-05,
+                "q1": 0.0018355000001974986,
+                "q3": 0.0018641999999999825,
+                "iqr_outliers": 2,
+                "stddev_outliers": 1,
+                "outliers": "1;2",
+                "ld15iqr": 0.0017965999995794846,
+                "hd15iqr": 0.0019582000004447764,
+                "ops": 531.3566864812059,
+                "total": 0.03763949999847682,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_push_n_elements_time[2000-3]",
+            "fullname": "lab4-heap/test_benchmark.py::test_push_n_elements_time[2000-3]",
+            "params": {
+                "size": 2000,
+                "dimension": 3
+            },
+            "param": "2000-3",
+            "extra_info": {
+                "function": "push",
+                "dimension": 3,
+                "size": 2000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0017844999993030797,
+                "max": 0.0019191999999748077,
+                "mean": 0.0018360549999670184,
+                "stddev": 3.4553352662342254e-05,
+                "rounds": 20,
+                "median": 0.001828750000186119,
+                "iqr": 3.6100000215810724e-05,
+                "q1": 0.0018136999997295788,
+                "q3": 0.0018497999999453896,
+                "iqr_outliers": 1,
+                "stddev_outliers": 5,
+                "outliers": "5;1",
+                "ld15iqr": 0.0017844999993030797,
+                "hd15iqr": 0.0019191999999748077,
+                "ops": 544.6459937300153,
+                "total": 0.03672109999934037,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_push_n_elements_time[2000-4]",
+            "fullname": "lab4-heap/test_benchmark.py::test_push_n_elements_time[2000-4]",
+            "params": {
+                "size": 2000,
+                "dimension": 4
+            },
+            "param": "2000-4",
+            "extra_info": {
+                "function": "push",
+                "dimension": 4,
+                "size": 2000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0017827000001489068,
+                "max": 0.00200330000006943,
+                "mean": 0.001849175000006653,
+                "stddev": 5.464933073341498e-05,
+                "rounds": 20,
+                "median": 0.001832399999784684,
+                "iqr": 5.129999999553547e-05,
+                "q1": 0.0018173000003116613,
+                "q3": 0.0018686000003071968,
+                "iqr_outliers": 2,
+                "stddev_outliers": 3,
+                "outliers": "3;2",
+                "ld15iqr": 0.0017827000001489068,
+                "hd15iqr": 0.0019625000004452886,
+                "ops": 540.7816999453281,
+                "total": 0.03698350000013306,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_push_n_elements_time[4000-2]",
+            "fullname": "lab4-heap/test_benchmark.py::test_push_n_elements_time[4000-2]",
+            "params": {
+                "size": 4000,
+                "dimension": 2
+            },
+            "param": "4000-2",
+            "extra_info": {
+                "function": "push",
+                "dimension": 2,
+                "size": 4000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0036731000000145286,
+                "max": 0.004613200000676443,
+                "mean": 0.0038789149999502114,
+                "stddev": 0.00023217294222555195,
+                "rounds": 20,
+                "median": 0.0037887000003138382,
+                "iqr": 0.00022385000011126976,
+                "q1": 0.0037173499999880733,
+                "q3": 0.003941200000099343,
+                "iqr_outliers": 1,
+                "stddev_outliers": 3,
+                "outliers": "3;1",
+                "ld15iqr": 0.0036731000000145286,
+                "hd15iqr": 0.004613200000676443,
+                "ops": 257.8040508783605,
+                "total": 0.07757829999900423,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_push_n_elements_time[4000-3]",
+            "fullname": "lab4-heap/test_benchmark.py::test_push_n_elements_time[4000-3]",
+            "params": {
+                "size": 4000,
+                "dimension": 3
+            },
+            "param": "4000-3",
+            "extra_info": {
+                "function": "push",
+                "dimension": 3,
+                "size": 4000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.003598700000111421,
+                "max": 0.004314899999371846,
+                "mean": 0.003818695000018124,
+                "stddev": 0.00020163999026557875,
+                "rounds": 20,
+                "median": 0.0037456999998539686,
+                "iqr": 0.00023584999917147798,
+                "q1": 0.003677750000406377,
+                "q3": 0.003913599999577855,
+                "iqr_outliers": 2,
+                "stddev_outliers": 4,
+                "outliers": "4;2",
+                "ld15iqr": 0.003598700000111421,
+                "hd15iqr": 0.004270099999303056,
+                "ops": 261.86956538693295,
+                "total": 0.07637390000036248,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_push_n_elements_time[4000-4]",
+            "fullname": "lab4-heap/test_benchmark.py::test_push_n_elements_time[4000-4]",
+            "params": {
+                "size": 4000,
+                "dimension": 4
+            },
+            "param": "4000-4",
+            "extra_info": {
+                "function": "push",
+                "dimension": 4,
+                "size": 4000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0036065999993297737,
+                "max": 0.004579599999487982,
+                "mean": 0.0037817399999767074,
+                "stddev": 0.00026601536238681807,
+                "rounds": 20,
+                "median": 0.003707700000177283,
+                "iqr": 0.00010874999998122803,
+                "q1": 0.0036522999998851446,
+                "q3": 0.0037610499998663727,
+                "iqr_outliers": 2,
+                "stddev_outliers": 2,
+                "outliers": "2;2",
+                "ld15iqr": 0.0036065999993297737,
+                "hd15iqr": 0.004498700000112876,
+                "ops": 264.4285434763255,
+                "total": 0.07563479999953415,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_push_n_elements_time[6000-2]",
+            "fullname": "lab4-heap/test_benchmark.py::test_push_n_elements_time[6000-2]",
+            "params": {
+                "size": 6000,
+                "dimension": 2
+            },
+            "param": "6000-2",
+            "extra_info": {
+                "function": "push",
+                "dimension": 2,
+                "size": 6000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.005545900000470283,
+                "max": 0.006207399999766494,
+                "mean": 0.00571812500015767,
+                "stddev": 0.00018985726730132117,
+                "rounds": 20,
+                "median": 0.005628500000057102,
+                "iqr": 0.00020200000017212005,
+                "q1": 0.005580400000326335,
+                "q3": 0.0057824000004984555,
+                "iqr_outliers": 2,
+                "stddev_outliers": 3,
+                "outliers": "3;2",
+                "ld15iqr": 0.005545900000470283,
+                "hd15iqr": 0.006105800000113959,
+                "ops": 174.88250081493956,
+                "total": 0.1143625000031534,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_push_n_elements_time[6000-3]",
+            "fullname": "lab4-heap/test_benchmark.py::test_push_n_elements_time[6000-3]",
+            "params": {
+                "size": 6000,
+                "dimension": 3
+            },
+            "param": "6000-3",
+            "extra_info": {
+                "function": "push",
+                "dimension": 3,
+                "size": 6000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.005508600000212027,
+                "max": 0.006112600000051316,
+                "mean": 0.0056886000000304195,
+                "stddev": 0.00014959552836510536,
+                "rounds": 20,
+                "median": 0.005653700000038953,
+                "iqr": 9.694999971543439e-05,
+                "q1": 0.005607700000382465,
+                "q3": 0.0057046500000978995,
+                "iqr_outliers": 2,
+                "stddev_outliers": 4,
+                "outliers": "4;2",
+                "ld15iqr": 0.005508600000212027,
+                "hd15iqr": 0.006005500000355823,
+                "ops": 175.7901768439779,
+                "total": 0.11377200000060839,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_push_n_elements_time[6000-4]",
+            "fullname": "lab4-heap/test_benchmark.py::test_push_n_elements_time[6000-4]",
+            "params": {
+                "size": 6000,
+                "dimension": 4
+            },
+            "param": "6000-4",
+            "extra_info": {
+                "function": "push",
+                "dimension": 4,
+                "size": 6000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.005489300000590447,
+                "max": 0.005882800000108546,
+                "mean": 0.0056158949999826294,
+                "stddev": 0.00010350056433496619,
+                "rounds": 20,
+                "median": 0.005573199999616918,
+                "iqr": 0.00013165000063963817,
+                "q1": 0.005542149999655521,
+                "q3": 0.005673800000295159,
+                "iqr_outliers": 1,
+                "stddev_outliers": 4,
+                "outliers": "4;1",
+                "ld15iqr": 0.005489300000590447,
+                "hd15iqr": 0.005882800000108546,
+                "ops": 178.06600728879246,
+                "total": 0.11231789999965258,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_push_n_elements_time[8000-2]",
+            "fullname": "lab4-heap/test_benchmark.py::test_push_n_elements_time[8000-2]",
+            "params": {
+                "size": 8000,
+                "dimension": 2
+            },
+            "param": "8000-2",
+            "extra_info": {
+                "function": "push",
+                "dimension": 2,
+                "size": 8000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.007370700000137731,
+                "max": 0.008498799999870243,
+                "mean": 0.007602275000044756,
+                "stddev": 0.000269013047773981,
+                "rounds": 20,
+                "median": 0.007519849999880535,
+                "iqr": 0.00019119999979011482,
+                "q1": 0.0074438999999983935,
+                "q3": 0.007635099999788508,
+                "iqr_outliers": 2,
+                "stddev_outliers": 2,
+                "outliers": "2;2",
+                "ld15iqr": 0.007370700000137731,
+                "hd15iqr": 0.008006200000636454,
+                "ops": 131.539572035228,
+                "total": 0.15204550000089512,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_push_n_elements_time[8000-3]",
+            "fullname": "lab4-heap/test_benchmark.py::test_push_n_elements_time[8000-3]",
+            "params": {
+                "size": 8000,
+                "dimension": 3
+            },
+            "param": "8000-3",
+            "extra_info": {
+                "function": "push",
+                "dimension": 3,
+                "size": 8000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.007404400000268652,
+                "max": 0.007969400000547466,
+                "mean": 0.0075827750000371456,
+                "stddev": 0.00016030351777721996,
+                "rounds": 20,
+                "median": 0.007562249999864434,
+                "iqr": 0.00014110000029177172,
+                "q1": 0.0074581999997462844,
+                "q3": 0.007599300000038056,
+                "iqr_outliers": 3,
+                "stddev_outliers": 6,
+                "outliers": "6;3",
+                "ld15iqr": 0.007404400000268652,
+                "hd15iqr": 0.007854500000576081,
+                "ops": 131.87784155472124,
+                "total": 0.1516555000007429,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_push_n_elements_time[8000-4]",
+            "fullname": "lab4-heap/test_benchmark.py::test_push_n_elements_time[8000-4]",
+            "params": {
+                "size": 8000,
+                "dimension": 4
+            },
+            "param": "8000-4",
+            "extra_info": {
+                "function": "push",
+                "dimension": 4,
+                "size": 8000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.007449900000210619,
+                "max": 0.008332000000336848,
+                "mean": 0.007674455000005765,
+                "stddev": 0.00022629321098338595,
+                "rounds": 20,
+                "median": 0.007621950000157085,
+                "iqr": 0.0002847000000656408,
+                "q1": 0.007502799999656418,
+                "q3": 0.007787499999722058,
+                "iqr_outliers": 1,
+                "stddev_outliers": 4,
+                "outliers": "4;1",
+                "ld15iqr": 0.007449900000210619,
+                "hd15iqr": 0.008332000000336848,
+                "ops": 130.30241235361325,
+                "total": 0.15348910000011529,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_push_n_elements_time[10000-2]",
+            "fullname": "lab4-heap/test_benchmark.py::test_push_n_elements_time[10000-2]",
+            "params": {
+                "size": 10000,
+                "dimension": 2
+            },
+            "param": "10000-2",
+            "extra_info": {
+                "function": "push",
+                "dimension": 2,
+                "size": 10000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.009383300000081363,
+                "max": 0.015477500000088185,
+                "mean": 0.01089345499999581,
+                "stddev": 0.001861001626916577,
+                "rounds": 20,
+                "median": 0.009906499999488005,
+                "iqr": 0.0023696499997640785,
+                "q1": 0.009575500000210013,
+                "q3": 0.011945149999974092,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.009383300000081363,
+                "hd15iqr": 0.015477500000088185,
+                "ops": 91.79824031956662,
+                "total": 0.21786909999991622,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_push_n_elements_time[10000-3]",
+            "fullname": "lab4-heap/test_benchmark.py::test_push_n_elements_time[10000-3]",
+            "params": {
+                "size": 10000,
+                "dimension": 3
+            },
+            "param": "10000-3",
+            "extra_info": {
+                "function": "push",
+                "dimension": 3,
+                "size": 10000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.00928589999966789,
+                "max": 0.010335499999200692,
+                "mean": 0.009584214999858887,
+                "stddev": 0.0002392599515868675,
+                "rounds": 20,
+                "median": 0.009504199999810226,
+                "iqr": 0.00019749999955820385,
+                "q1": 0.0094400000002679,
+                "q3": 0.009637499999826105,
+                "iqr_outliers": 2,
+                "stddev_outliers": 4,
+                "outliers": "4;2",
+                "ld15iqr": 0.00928589999966789,
+                "hd15iqr": 0.009983399999327958,
+                "ops": 104.3382269716115,
+                "total": 0.19168429999717773,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_push_n_elements_time[10000-4]",
+            "fullname": "lab4-heap/test_benchmark.py::test_push_n_elements_time[10000-4]",
+            "params": {
+                "size": 10000,
+                "dimension": 4
+            },
+            "param": "10000-4",
+            "extra_info": {
+                "function": "push",
+                "dimension": 4,
+                "size": 10000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.009150899999440298,
+                "max": 0.010708300000260351,
+                "mean": 0.009650410000085685,
+                "stddev": 0.0004051928469203887,
+                "rounds": 20,
+                "median": 0.009588800000074116,
+                "iqr": 0.00041085000020757434,
+                "q1": 0.009363199999825156,
+                "q3": 0.00977405000003273,
+                "iqr_outliers": 2,
+                "stddev_outliers": 3,
+                "outliers": "3;2",
+                "ld15iqr": 0.009150899999440298,
+                "hd15iqr": 0.010597400000733614,
+                "ops": 103.62254038855562,
+                "total": 0.1930082000017137,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pop_n_times_time[1000-2]",
+            "fullname": "lab4-heap/test_benchmark.py::test_pop_n_times_time[1000-2]",
+            "params": {
+                "size": 1000,
+                "heap": "UNSERIALIZABLE[<heap.Heap object at 0x7fea491fbe20>]",
+                "dimension": 2
+            },
+            "param": "1000-2",
+            "extra_info": {
+                "function": "pop_n_times",
+                "dimension": 2,
+                "size": 1000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.013172100000701903,
+                "max": 0.01576569999997446,
+                "mean": 0.014057524999952876,
+                "stddev": 0.0007819749490102646,
+                "rounds": 20,
+                "median": 0.01380574999984674,
+                "iqr": 0.0010617000002639543,
+                "q1": 0.013476149999860354,
+                "q3": 0.014537850000124308,
+                "iqr_outliers": 0,
+                "stddev_outliers": 5,
+                "outliers": "5;0",
+                "ld15iqr": 0.013172100000701903,
+                "hd15iqr": 0.01576569999997446,
+                "ops": 71.13627754553895,
+                "total": 0.2811504999990575,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pop_n_times_time[1000-3]",
+            "fullname": "lab4-heap/test_benchmark.py::test_pop_n_times_time[1000-3]",
+            "params": {
+                "size": 1000,
+                "heap": "UNSERIALIZABLE[<heap.Heap object at 0x7fea491fbe80>]",
+                "dimension": 3
+            },
+            "param": "1000-3",
+            "extra_info": {
+                "function": "pop_n_times",
+                "dimension": 3,
+                "size": 1000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.013114800000039395,
+                "max": 0.014073000000280445,
+                "mean": 0.01342449500011753,
+                "stddev": 0.00024109186617602912,
+                "rounds": 20,
+                "median": 0.013437000000521948,
+                "iqr": 0.000346200000421959,
+                "q1": 0.013217899999744986,
+                "q3": 0.013564100000166945,
+                "iqr_outliers": 0,
+                "stddev_outliers": 6,
+                "outliers": "6;0",
+                "ld15iqr": 0.013114800000039395,
+                "hd15iqr": 0.014073000000280445,
+                "ops": 74.49069778723482,
+                "total": 0.2684899000023506,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pop_n_times_time[1000-4]",
+            "fullname": "lab4-heap/test_benchmark.py::test_pop_n_times_time[1000-4]",
+            "params": {
+                "size": 1000,
+                "heap": "UNSERIALIZABLE[<heap.Heap object at 0x7fea4918f1c0>]",
+                "dimension": 4
+            },
+            "param": "1000-4",
+            "extra_info": {
+                "function": "pop_n_times",
+                "dimension": 4,
+                "size": 1000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.013134400000126334,
+                "max": 0.014047499999833235,
+                "mean": 0.013287180000088484,
+                "stddev": 0.00020957596432534225,
+                "rounds": 20,
+                "median": 0.013243750000128784,
+                "iqr": 0.00016659999982948648,
+                "q1": 0.013152500000160217,
+                "q3": 0.013319099999989703,
+                "iqr_outliers": 1,
+                "stddev_outliers": 2,
+                "outliers": "2;1",
+                "ld15iqr": 0.013134400000126334,
+                "hd15iqr": 0.014047499999833235,
+                "ops": 75.26051426964493,
+                "total": 0.26574360000176966,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pop_n_times_time[2000-2]",
+            "fullname": "lab4-heap/test_benchmark.py::test_pop_n_times_time[2000-2]",
+            "params": {
+                "size": 2000,
+                "heap": "UNSERIALIZABLE[<heap.Heap object at 0x7fea491fbe20>]",
+                "dimension": 2
+            },
+            "param": "2000-2",
+            "extra_info": {
+                "function": "pop_n_times",
+                "dimension": 2,
+                "size": 2000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.02088019999973767,
+                "max": 0.022069200000260025,
+                "mean": 0.021286059999829375,
+                "stddev": 0.000263451981843931,
+                "rounds": 20,
+                "median": 0.021273249999467225,
+                "iqr": 0.00026435000017954735,
+                "q1": 0.021150849999685306,
+                "q3": 0.021415199999864853,
+                "iqr_outliers": 1,
+                "stddev_outliers": 5,
+                "outliers": "5;1",
+                "ld15iqr": 0.02088019999973767,
+                "hd15iqr": 0.022069200000260025,
+                "ops": 46.97910275588887,
+                "total": 0.42572119999658753,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pop_n_times_time[2000-3]",
+            "fullname": "lab4-heap/test_benchmark.py::test_pop_n_times_time[2000-3]",
+            "params": {
+                "size": 2000,
+                "heap": "UNSERIALIZABLE[<heap.Heap object at 0x7fea491fbe80>]",
+                "dimension": 3
+            },
+            "param": "2000-3",
+            "extra_info": {
+                "function": "pop_n_times",
+                "dimension": 3,
+                "size": 2000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.021011799999541836,
+                "max": 0.022908099999767728,
+                "mean": 0.021566845000006652,
+                "stddev": 0.0005638186666743884,
+                "rounds": 20,
+                "median": 0.021353300000100717,
+                "iqr": 0.0006612000001950946,
+                "q1": 0.02116169999999329,
+                "q3": 0.021822900000188383,
+                "iqr_outliers": 1,
+                "stddev_outliers": 4,
+                "outliers": "4;1",
+                "ld15iqr": 0.021011799999541836,
+                "hd15iqr": 0.022908099999767728,
+                "ops": 46.36746821334746,
+                "total": 0.43133690000013303,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pop_n_times_time[2000-4]",
+            "fullname": "lab4-heap/test_benchmark.py::test_pop_n_times_time[2000-4]",
+            "params": {
+                "size": 2000,
+                "heap": "UNSERIALIZABLE[<heap.Heap object at 0x7fea4918f1c0>]",
+                "dimension": 4
+            },
+            "param": "2000-4",
+            "extra_info": {
+                "function": "pop_n_times",
+                "dimension": 4,
+                "size": 2000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.021484399999280868,
+                "max": 0.027827300000353716,
+                "mean": 0.022514810000166106,
+                "stddev": 0.0013944762341492585,
+                "rounds": 20,
+                "median": 0.022201050000148825,
+                "iqr": 0.0009281499997086939,
+                "q1": 0.021773850000499806,
+                "q3": 0.0227020000002085,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.021484399999280868,
+                "hd15iqr": 0.027827300000353716,
+                "ops": 44.41520936630699,
+                "total": 0.45029620000332216,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pop_n_times_time[4000-2]",
+            "fullname": "lab4-heap/test_benchmark.py::test_pop_n_times_time[4000-2]",
+            "params": {
+                "size": 4000,
+                "heap": "UNSERIALIZABLE[<heap.Heap object at 0x7fea491fbe20>]",
+                "dimension": 2
+            },
+            "param": "4000-2",
+            "extra_info": {
+                "function": "pop_n_times",
+                "dimension": 2,
+                "size": 4000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.03497289999995701,
+                "max": 0.0544157999993331,
+                "mean": 0.03724164500013103,
+                "stddev": 0.0047319149819081115,
+                "rounds": 20,
+                "median": 0.0356565000001865,
+                "iqr": 0.0009220999995704915,
+                "q1": 0.03530070000033447,
+                "q3": 0.036222799999904964,
+                "iqr_outliers": 3,
+                "stddev_outliers": 2,
+                "outliers": "2;3",
+                "ld15iqr": 0.03497289999995701,
+                "hd15iqr": 0.038369500000044354,
+                "ops": 26.851660285051363,
+                "total": 0.7448329000026206,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pop_n_times_time[4000-3]",
+            "fullname": "lab4-heap/test_benchmark.py::test_pop_n_times_time[4000-3]",
+            "params": {
+                "size": 4000,
+                "heap": "UNSERIALIZABLE[<heap.Heap object at 0x7fea491fbe80>]",
+                "dimension": 3
+            },
+            "param": "4000-3",
+            "extra_info": {
+                "function": "pop_n_times",
+                "dimension": 3,
+                "size": 4000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.034863799999584444,
+                "max": 0.040444799999932,
+                "mean": 0.03591890499992587,
+                "stddev": 0.001492736958353487,
+                "rounds": 20,
+                "median": 0.03533834999961982,
+                "iqr": 0.0007318499997381878,
+                "q1": 0.035097550000045885,
+                "q3": 0.03582939999978407,
+                "iqr_outliers": 3,
+                "stddev_outliers": 3,
+                "outliers": "3;3",
+                "ld15iqr": 0.034863799999584444,
+                "hd15iqr": 0.03837860000021465,
+                "ops": 27.84049235359663,
+                "total": 0.7183780999985174,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pop_n_times_time[4000-4]",
+            "fullname": "lab4-heap/test_benchmark.py::test_pop_n_times_time[4000-4]",
+            "params": {
+                "size": 4000,
+                "heap": "UNSERIALIZABLE[<heap.Heap object at 0x7fea4918f1c0>]",
+                "dimension": 4
+            },
+            "param": "4000-4",
+            "extra_info": {
+                "function": "pop_n_times",
+                "dimension": 4,
+                "size": 4000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.034529900000052294,
+                "max": 0.03668469999956869,
+                "mean": 0.035361800000055156,
+                "stddev": 0.000576065309710574,
+                "rounds": 20,
+                "median": 0.03525464999984251,
+                "iqr": 0.0007124500002646528,
+                "q1": 0.03496104999976524,
+                "q3": 0.03567350000002989,
+                "iqr_outliers": 0,
+                "stddev_outliers": 5,
+                "outliers": "5;0",
+                "ld15iqr": 0.034529900000052294,
+                "hd15iqr": 0.03668469999956869,
+                "ops": 28.279103439260453,
+                "total": 0.7072360000011031,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pop_n_times_time[6000-2]",
+            "fullname": "lab4-heap/test_benchmark.py::test_pop_n_times_time[6000-2]",
+            "params": {
+                "size": 6000,
+                "heap": "UNSERIALIZABLE[<heap.Heap object at 0x7fea491fbe20>]",
+                "dimension": 2
+            },
+            "param": "6000-2",
+            "extra_info": {
+                "function": "pop_n_times",
+                "dimension": 2,
+                "size": 6000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.04702569999972184,
+                "max": 0.05379759999959788,
+                "mean": 0.04870159999991301,
+                "stddev": 0.0018915406824769824,
+                "rounds": 20,
+                "median": 0.04843224999967788,
+                "iqr": 0.0014364999992722005,
+                "q1": 0.04748830000016824,
+                "q3": 0.04892479999944044,
+                "iqr_outliers": 2,
+                "stddev_outliers": 2,
+                "outliers": "2;2",
+                "ld15iqr": 0.04702569999972184,
+                "hd15iqr": 0.05377649999991263,
+                "ops": 20.533206301267025,
+                "total": 0.9740319999982603,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pop_n_times_time[6000-3]",
+            "fullname": "lab4-heap/test_benchmark.py::test_pop_n_times_time[6000-3]",
+            "params": {
+                "size": 6000,
+                "heap": "UNSERIALIZABLE[<heap.Heap object at 0x7fea491fbe80>]",
+                "dimension": 3
+            },
+            "param": "6000-3",
+            "extra_info": {
+                "function": "pop_n_times",
+                "dimension": 3,
+                "size": 6000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.047042800000781426,
+                "max": 0.051376499999605585,
+                "mean": 0.04809920000011516,
+                "stddev": 0.001277738448008332,
+                "rounds": 20,
+                "median": 0.04758739999988393,
+                "iqr": 0.00143835000017134,
+                "q1": 0.047190600000249106,
+                "q3": 0.048628950000420446,
+                "iqr_outliers": 1,
+                "stddev_outliers": 5,
+                "outliers": "5;1",
+                "ld15iqr": 0.047042800000781426,
+                "hd15iqr": 0.051376499999605585,
+                "ops": 20.790366575693685,
+                "total": 0.9619840000023032,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pop_n_times_time[6000-4]",
+            "fullname": "lab4-heap/test_benchmark.py::test_pop_n_times_time[6000-4]",
+            "params": {
+                "size": 6000,
+                "heap": "UNSERIALIZABLE[<heap.Heap object at 0x7fea4918f1c0>]",
+                "dimension": 4
+            },
+            "param": "6000-4",
+            "extra_info": {
+                "function": "pop_n_times",
+                "dimension": 4,
+                "size": 6000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.04712329999983922,
+                "max": 0.049178000000210886,
+                "mean": 0.0477278949999345,
+                "stddev": 0.0005555387536845572,
+                "rounds": 20,
+                "median": 0.047583449999820004,
+                "iqr": 0.0006964499998503015,
+                "q1": 0.04728789999990113,
+                "q3": 0.04798434999975143,
+                "iqr_outliers": 1,
+                "stddev_outliers": 4,
+                "outliers": "4;1",
+                "ld15iqr": 0.04712329999983922,
+                "hd15iqr": 0.049178000000210886,
+                "ops": 20.95210777683307,
+                "total": 0.9545578999986901,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pop_n_times_time[8000-2]",
+            "fullname": "lab4-heap/test_benchmark.py::test_pop_n_times_time[8000-2]",
+            "params": {
+                "size": 8000,
+                "heap": "UNSERIALIZABLE[<heap.Heap object at 0x7fea491fbe20>]",
+                "dimension": 2
+            },
+            "param": "8000-2",
+            "extra_info": {
+                "function": "pop_n_times",
+                "dimension": 2,
+                "size": 8000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.05785999999989144,
+                "max": 0.05909849999989092,
+                "mean": 0.05835584499996003,
+                "stddev": 0.000292370875695502,
+                "rounds": 20,
+                "median": 0.05832699999973556,
+                "iqr": 0.00043400000049587106,
+                "q1": 0.058123499999965134,
+                "q3": 0.058557500000461005,
+                "iqr_outliers": 0,
+                "stddev_outliers": 5,
+                "outliers": "5;0",
+                "ld15iqr": 0.05785999999989144,
+                "hd15iqr": 0.05909849999989092,
+                "ops": 17.136244021497504,
+                "total": 1.1671168999992005,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pop_n_times_time[8000-3]",
+            "fullname": "lab4-heap/test_benchmark.py::test_pop_n_times_time[8000-3]",
+            "params": {
+                "size": 8000,
+                "heap": "UNSERIALIZABLE[<heap.Heap object at 0x7fea491fbe80>]",
+                "dimension": 3
+            },
+            "param": "8000-3",
+            "extra_info": {
+                "function": "pop_n_times",
+                "dimension": 3,
+                "size": 8000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.057706299999154,
+                "max": 0.05915290000029927,
+                "mean": 0.05810526499985826,
+                "stddev": 0.00031868880934666436,
+                "rounds": 20,
+                "median": 0.058022499999424326,
+                "iqr": 0.0003066500003114925,
+                "q1": 0.05793454999957248,
+                "q3": 0.058241199999883975,
+                "iqr_outliers": 1,
+                "stddev_outliers": 5,
+                "outliers": "5;1",
+                "ld15iqr": 0.057706299999154,
+                "hd15iqr": 0.05915290000029927,
+                "ops": 17.21014438196675,
+                "total": 1.1621052999971653,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pop_n_times_time[8000-4]",
+            "fullname": "lab4-heap/test_benchmark.py::test_pop_n_times_time[8000-4]",
+            "params": {
+                "size": 8000,
+                "heap": "UNSERIALIZABLE[<heap.Heap object at 0x7fea4918f1c0>]",
+                "dimension": 4
+            },
+            "param": "8000-4",
+            "extra_info": {
+                "function": "pop_n_times",
+                "dimension": 4,
+                "size": 8000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.057673199999953795,
+                "max": 0.05956570000034844,
+                "mean": 0.05822046000002956,
+                "stddev": 0.0005537516500994702,
+                "rounds": 20,
+                "median": 0.058012549999602925,
+                "iqr": 0.00027219999992667,
+                "q1": 0.05793995000021823,
+                "q3": 0.0582121500001449,
+                "iqr_outliers": 3,
+                "stddev_outliers": 3,
+                "outliers": "3;3",
+                "ld15iqr": 0.057673199999953795,
+                "hd15iqr": 0.059317299999747775,
+                "ops": 17.176092390879294,
+                "total": 1.1644092000005912,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pop_n_times_time[10000-2]",
+            "fullname": "lab4-heap/test_benchmark.py::test_pop_n_times_time[10000-2]",
+            "params": {
+                "size": 10000,
+                "heap": "UNSERIALIZABLE[<heap.Heap object at 0x7fea491fbe20>]",
+                "dimension": 2
+            },
+            "param": "10000-2",
+            "extra_info": {
+                "function": "pop_n_times",
+                "dimension": 2,
+                "size": 10000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.06631560000005265,
+                "max": 0.07020279999960621,
+                "mean": 0.06720273000000816,
+                "stddev": 0.0010750807544093765,
+                "rounds": 20,
+                "median": 0.06684274999997797,
+                "iqr": 0.0005954999996902188,
+                "q1": 0.06662995000033334,
+                "q3": 0.06722545000002356,
+                "iqr_outliers": 2,
+                "stddev_outliers": 2,
+                "outliers": "2;2",
+                "ld15iqr": 0.06631560000005265,
+                "hd15iqr": 0.07019370000034542,
+                "ops": 14.880347866818484,
+                "total": 1.3440546000001632,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pop_n_times_time[10000-3]",
+            "fullname": "lab4-heap/test_benchmark.py::test_pop_n_times_time[10000-3]",
+            "params": {
+                "size": 10000,
+                "heap": "UNSERIALIZABLE[<heap.Heap object at 0x7fea491fbe80>]",
+                "dimension": 3
+            },
+            "param": "10000-3",
+            "extra_info": {
+                "function": "pop_n_times",
+                "dimension": 3,
+                "size": 10000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.06630379999933211,
+                "max": 0.06916629999977886,
+                "mean": 0.06712217000003876,
+                "stddev": 0.0006851984307853305,
+                "rounds": 20,
+                "median": 0.06687205000025642,
+                "iqr": 0.000487400000110938,
+                "q1": 0.06675059999997757,
+                "q3": 0.0672380000000885,
+                "iqr_outliers": 3,
+                "stddev_outliers": 4,
+                "outliers": "4;3",
+                "ld15iqr": 0.06630379999933211,
+                "hd15iqr": 0.06819309999991674,
+                "ops": 14.898207254017901,
+                "total": 1.342443400000775,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pop_n_times_time[10000-4]",
+            "fullname": "lab4-heap/test_benchmark.py::test_pop_n_times_time[10000-4]",
+            "params": {
+                "size": 10000,
+                "heap": "UNSERIALIZABLE[<heap.Heap object at 0x7fea4918f1c0>]",
+                "dimension": 4
+            },
+            "param": "10000-4",
+            "extra_info": {
+                "function": "pop_n_times",
+                "dimension": 4,
+                "size": 10000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0661523999997371,
+                "max": 0.06764359999942826,
+                "mean": 0.06682605999990301,
+                "stddev": 0.0003987237039732518,
+                "rounds": 20,
+                "median": 0.06678194999949483,
+                "iqr": 0.0005195000003368477,
+                "q1": 0.06653884999968795,
+                "q3": 0.0670583500000248,
+                "iqr_outliers": 0,
+                "stddev_outliers": 5,
+                "outliers": "5;0",
+                "ld15iqr": 0.0661523999997371,
+                "hd15iqr": 0.06764359999942826,
+                "ops": 14.964222041542646,
+                "total": 1.3365211999980602,
+                "iterations": 1
+            }
+        }
+    ],
+    "datetime": "2021-04-28T18:30:47.258289",
+    "version": "3.2.3"
+}
