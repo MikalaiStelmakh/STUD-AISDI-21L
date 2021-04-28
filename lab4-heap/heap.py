@@ -1,106 +1,107 @@
 from abstract_heap import AbstractHeap
 
 
-class Node:
-    def __init__(self, value=None):
-        self.val = value
-        self.parent = None
-        self.firstChild = None
-        self.secondChild = None
-        self.thirdChild = None
-        self.fourthChild = None
-
-
 class Heap(AbstractHeap):
-    def __init__(self, dimension, value=None):
+    def __init__(self, dimension: int):
+        if dimension < 2:
+            raise ValueError("Invalid dimension value")
         self.dimension = dimension
-        self.root = None if not value else Node(value)
-        self.data = [] if not value else [self.root]
+        self._data = []
+
+    def len(self):
+        return len(self._data)
+
+    def shift_down(self, startpos, pos):
+        newitem = self._data[pos]
+        # Follow the path to the root, moving parents down until finding
+        # a place newitem fits.
+        while pos > startpos:
+            parentpos = (pos - 1)
+            parent = self._data[parentpos]
+            if newitem < parent:
+                self._data[pos] = parent
+                pos = parentpos
+                continue
+            break
+        self._data[pos] = newitem
+
+    def shift_up(self, pos):
+        endpos = len(self._data)
+        startpos = pos
+        newitem = self._data[pos]
+        # Bubble up the smaller child until hitting a leaf.
+        childpos = 2*pos + 1    # leftmost child position
+        while childpos < endpos:
+            # Set childpos to index of smaller child.
+            rightpos = childpos + 1
+            if rightpos < endpos and not self._data[childpos] < self._data[rightpos]:
+                childpos = rightpos
+            # Move the smaller child up.
+            self._data[pos] = self._data[childpos]
+            pos = childpos
+            childpos = 2*pos + 1
+        # The leaf at pos is empty now.  Put newitem there, and bubble it up
+        # to its final resting place (by sifting its parents down).
+        self._data[pos] = newitem
+        self.shift_down(startpos, pos)
 
     def peek(self):
-        return self.root
+        """Get the topmost element without changing the heap."""
+        return self._data[0]
 
-    def findParentIndex(self, index):
-        return (index - 1) // self.dimension
-
-    def findFirstChildIndex(self, index):
-        return self.dimension * index + 1
-
-    def findSecondChildIndex(self, index):
-        return self.dimension * index + 2
-
-    def findThirdChildIndex(self, index):
-        return self.dimension * index + 3
-
-    def findFourthChildIndex(self, index):
-        return self.dimension * index + 4
-
-    def heapify(self, start_index):
-        for index, node in enumerate(self.data[start_index:]):
-            index += start_index
-            if index == 0:
-                self.root = node
-                continue
-            parentIndex = self.findParentIndex(index)
-            node.parent = self.data[parentIndex]
-            parentFirstChildIndex = self.findFirstChildIndex(parentIndex)
-            parentSecondChildIndex = self.findSecondChildIndex(parentIndex)
-            if parentFirstChildIndex == index:
-                node.parent.firstChild = node
-            elif parentSecondChildIndex == index:
-                node.parent.secondChild = node
-            elif self.dimension > 3:
-                parentThirdChildIndex = self.findThirdChildIndex(parentIndex)
-                if parentThirdChildIndex == index:
-                    node.parent.thirdChild = node
-                parentFourthChildIndex = self.findFourthChildIndex(parentIndex)
-                if parentFourthChildIndex == index:
-                    node.parent.fourthChild = node
-            elif self.dimension > 2:
-                parentThirdChildIndex = self.findThirdChildIndex(parentIndex)
-                if parentThirdChildIndex == index:
-                    node.parent.thirdChild = node
-
-    def push(self, values):
-        current_index = len(self.data)
-        for value in values:
-            self.data.append(Node(value))
-        self.heapify(current_index)
+    def push(self, item):
+        """Add an element to the heap."""
+        self._data.append(item)
+        self.shift_down(0, len(heap)-1)
 
     def pop(self):
-        deleted_node = self.data[0]
-        del self.data[0]
-        self.heapify(0)
-        return deleted_node
-
-    def pop_n_times(self, number_of_repetitions):
-        """Same as using pop function n times.
-        Much more efficient when removing a large number of elements."""
-        del self.data[:number_of_repetitions]
-        self.heapify(0)
+        """Remove the topmost element from the heap and return it."""
+        deleted = self._data[0]
+        del self._data[0]
+        self.shift_up(0)
+        return deleted
 
     def get_raw_data(self):
-        return self.data
+        """Get the underlying data storage."""
+        return self._data.copy()
 
-    def printTree(self):
-        if self.dimension == 2:
-            return self.printTwoDimension(self.data[0])
+    def pprint(self, root: int = 0, depth: int = 0) -> str:
+        str_: str = ""
 
-    def printTwoDimension(self, node, level=0):
-        if node is not None:
-            self.printTwoDimension(node.secondChild, level + 1)
-            print('\t' * level + '->' + str(node.val))
-            self.printTwoDimension(node.firstChild, level + 1)
+        leftmost_child = root*self.dimension + 1
+        children = list(range(
+            leftmost_child,
+            min(len(self), leftmost_child + self.dimension)
+        ))
+
+        left_children = children[:self.dimension//2]
+        right_children = children[self.dimension//2:]
+
+        for child in reversed(right_children):
+            str_ += self.pprint(child, depth + 4)
+        str_ += " "*depth + repr(self._data[root]) + "\n"
+        for child in reversed(left_children):
+            str_ += self.pprint(child, depth + 4)
+
+        return str_
+
+    def _print(self, index=0, level=0):
+        children = [self._data[index*self.dimension + indx] for indx in range(1, self.dimension+1)
+                    if index*self.dimension + indx < len(self._data)]
+        for child in reversed(children):
+            new_index = children.index(child) + 1
+            self._print(index+new_index, level+1)
+            print("\t"*(level+1) + "->", child)
 
 
 if __name__ == '__main__':
-    heap = Heap(dimension=2, value=30)
-    heap.push([20, 40, 50, 4, 9, 10, 19])
-    heap.printTree()
-    print('------------------------')
-    print(heap.pop())
-    heap.printTree()
-    print('------------------------')
-    print(heap.peek().val)
-    print(len(heap))
-    heap.printTree()
+    heap = Heap(2)
+    heap.push(1)
+    heap.push(2)
+    heap.push(3)
+    heap.push(4)
+    heap.push(5)
+    # print(heap.pprint())
+    print(heap.get_raw_data())
+    heap._print()
+
