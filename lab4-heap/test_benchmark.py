@@ -4,7 +4,7 @@ import random
 import copy
 
 
-BENCHMARK_ROUNDS = 10
+BENCHMARK_ROUNDS = 20
 NUMBERS = random.sample(range(1, 30001), 10000)
 SIZES = [1000, 2000, 4000, 6000, 8000, 10000]
 DIMENSIONS = [2, 3, 4]
@@ -42,5 +42,5 @@ def test_pop_n_times_time(heap, dimension, size, benchmark):
     benchmark.extra_info["function"] = "pop_n_times"
     benchmark.extra_info["dimension"] = dimension
     benchmark.extra_info["size"] = size
-    benchmark.pedantic(func)
+    benchmark.pedantic(func, rounds=BENCHMARK_ROUNDS)
 
