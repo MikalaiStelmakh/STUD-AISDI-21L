@@ -38,7 +38,7 @@ def createCharts(info, figs, axes):
         ax.legend()
         ax.set_yscale('log')
         ax.set_xticks([1000, 2000, 4000, 6000, 8000, 10000])
-        fig.savefig('lab4-heap/' + function)
+        fig.savefig('lab4-heap/charts/' + function)
 
 
 if __name__ == '__main__':
