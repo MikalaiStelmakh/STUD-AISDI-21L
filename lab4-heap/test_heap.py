@@ -25,7 +25,15 @@ def test_push_to_heap(dimension):
     heap.push(30)
     heap.push(19)
     heap.push(22)
-    assert heap.get_raw_data() == [10, 19, 20, 22, 30]
+    """
+    Binary heap example
+            -> 30
+    -> 10
+                    -> 22
+            -> 19
+                    -> 20
+    """
+    assert heap.get_raw_data() == [10, 19, 30, 20, 22]
 
 
 @pytest.mark.parametrize("dimension", DIMENSIONS)
@@ -36,8 +44,22 @@ def test_pop_from_heap(dimension):
     heap.push(30)
     heap.push(19)
     heap.push(22)
+    """
+    Binary heap example
+            -> 30
+    -> 10
+                    -> 22
+            -> 19
+                    -> 20
+    """
     assert heap.pop() == 10
-    assert heap.get_raw_data() == [19, 20, 30, 22]
+    """
+            -> 20
+    -> 19
+            -> 30
+                    -> 22
+    """
+    assert heap.get_raw_data() == [19, 30, 20, 22]
 
 
 @pytest.mark.parametrize("dimension", DIMENSIONS)
