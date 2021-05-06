@@ -35,6 +35,11 @@ def test_text_dont_contains_substring(function):
     assert function(substring="hello", text="world") == []
 
 
+@pytest.mark.parametrize("function", FUNCTIONS)
+def test_pattern_searching(function):
+    assert function(substring="AABA", text="AABAACAADAABAABA") == [0, 9, 12]
+
+
 def test_random_letters():
     text = "".join(random.choices(["a", "b"], k=100))
     substring = "".join(random.choices(["a", "b"], k=10))
