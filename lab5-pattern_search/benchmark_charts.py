@@ -23,13 +23,12 @@ def createCharts(info, fig, ax):
         times = []
         for size in info[function]:
             sizes.append(size)
-            times.append(info[function][size] * 10**3)
+            times.append(info[function][size] * 10**6)
         ax.plot(sizes, times, label=str(function))
     ax.set_title("Pattern search algorithm")
     ax.set_xlabel('Number of words')
-    ax.set_ylabel('Time [ms]')
+    ax.set_ylabel('Time [s]')
     ax.legend()
-    ax.set_yscale('log')
     fig.savefig("lab5-pattern_search/Chart")
 
 
