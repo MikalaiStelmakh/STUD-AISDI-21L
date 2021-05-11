@@ -71,4 +71,31 @@ def find_kr(substring: str, text: str):
         List of positions in ascending order of the beginnings
         of ``substring`` in ``text``.
     """
-    pass
+    if not substring:
+        return list(range(len(text)))
+    d = 123456789
+    q = 987654321
+    n = len(text)
+    m = len(substring)
+    h = pow(d, m - 1) % q
+    p = 0
+    t = 0
+    kr_position = []
+    if substring and text and n >= m:
+        for i in range(m):
+            p = (d * p + ord(substring[i])) % q
+            t = (d * t + ord(text[i])) % q
+        for s in range(n - m + 1):
+            if p == t:
+                match = True
+                for i in range(m):
+                    if substring[i] != text[s+i]:
+                        match = False
+                        break
+                if match:
+                    kr_position = kr_position + [s]
+            if s < n-m:
+                t = (t - h * ord(text[s])) % q
+                t = (t * d + ord(text[s+m])) % q
+                t = (t + q) % q
+    return kr_position
