@@ -1,4 +1,7 @@
-def find_n(substring: str, text: str):
+from typing import List
+
+
+def find_n(substring: str, text: str) -> List[int]:
     """
     Parameters:
         substring: substring to be found
@@ -20,7 +23,7 @@ def find_n(substring: str, text: str):
     return naive_position
 
 
-def find_kmp(substring: str, text: str):
+def find_kmp(substring: str, text: str) -> List[int]:
     """
     Parameters:
         substring: substring to be found
@@ -62,7 +65,7 @@ def find_kmp(substring: str, text: str):
     return kmp_position
 
 
-def find_kr(substring: str, text: str):
+def find_kr(substring: str, text: str) -> List[int]:
     """
     Parameters:
         substring: substring to be found
