@@ -1,5 +1,6 @@
 import json
 from matplotlib import pyplot as plt
+import matplotlib
 
 
 def read_from_json(path):
@@ -23,7 +24,7 @@ def createCharts(info, fig, ax):
         times = []
         for size in info[function]:
             sizes.append(size)
-            times.append(info[function][size] * 10**6)
+            times.append(info[function][size])
         ax.plot(sizes, times, label=str(function))
     ax.set_title("Pattern search algorithm")
     ax.set_xlabel('Number of words')
