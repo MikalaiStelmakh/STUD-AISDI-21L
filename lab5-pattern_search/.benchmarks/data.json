@@ -1,0 +1,774 @@
+{
+    "machine_info": {
+        "node": "mstelmakh",
+        "processor": "x86_64",
+        "machine": "x86_64",
+        "python_compiler": "GCC 9.3.0",
+        "python_implementation": "CPython",
+        "python_implementation_version": "3.8.5",
+        "python_version": "3.8.5",
+        "python_build": [
+            "default",
+            "Jan 27 2021 15:41:15"
+        ],
+        "release": "5.4.72-microsoft-standard-WSL2",
+        "system": "Linux",
+        "cpu": {
+            "python_version": "3.8.5.final.0 (64 bit)",
+            "cpuinfo_version": [
+                8,
+                0,
+                0
+            ],
+            "cpuinfo_version_string": "8.0.0",
+            "arch": "X86_64",
+            "bits": 64,
+            "count": 6,
+            "arch_string_raw": "x86_64",
+            "vendor_id_raw": "GenuineIntel",
+            "brand_raw": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
+            "hz_advertised_friendly": "2.6000 GHz",
+            "hz_actual_friendly": "2.5920 GHz",
+            "hz_advertised": [
+                2600000000,
+                0
+            ],
+            "hz_actual": [
+                2592007000,
+                0
+            ],
+            "stepping": 10,
+            "model": 158,
+            "family": 6,
+            "flags": [
+                "3dnowprefetch",
+                "abm",
+                "adx",
+                "aes",
+                "apic",
+                "arch_capabilities",
+                "avx",
+                "avx2",
+                "bmi1",
+                "bmi2",
+                "clflush",
+                "clflushopt",
+                "cmov",
+                "constant_tsc",
+                "cpuid",
+                "cx16",
+                "cx8",
+                "de",
+                "erms",
+                "f16c",
+                "flush_l1d",
+                "fma",
+                "fpu",
+                "fsgsbase",
+                "fxsr",
+                "ht",
+                "hypervisor",
+                "ibpb",
+                "ibrs",
+                "invpcid",
+                "invpcid_single",
+                "lahf_lm",
+                "lm",
+                "mca",
+                "mce",
+                "md_clear",
+                "mmx",
+                "movbe",
+                "msr",
+                "mtrr",
+                "nopl",
+                "nx",
+                "osxsave",
+                "pae",
+                "pat",
+                "pcid",
+                "pclmulqdq",
+                "pdpe1gb",
+                "pge",
+                "pni",
+                "popcnt",
+                "pse",
+                "pse36",
+                "pti",
+                "rdrand",
+                "rdrnd",
+                "rdseed",
+                "rdtscp",
+                "rep_good",
+                "sep",
+                "smap",
+                "smep",
+                "ss",
+                "ssbd",
+                "sse",
+                "sse2",
+                "sse4_1",
+                "sse4_2",
+                "ssse3",
+                "stibp",
+                "syscall",
+                "tsc",
+                "vme",
+                "xgetbv1",
+                "xsave",
+                "xsavec",
+                "xsaveopt",
+                "xsaves",
+                "xtopology"
+            ],
+            "l3_cache_size": 12582912,
+            "l2_cache_size": "1.5 MiB",
+            "l1_data_cache_size": "192 KiB",
+            "l1_instruction_cache_size": "192 KiB",
+            "l2_cache_line_size": 256,
+            "l2_cache_associativity": 6
+        }
+    },
+    "commit_info": {
+        "id": "abca991d4feb6c654a84e4133e8ed40824f3b01e",
+        "time": "2021-05-11T18:38:31+02:00",
+        "author_time": "2021-05-11T18:38:31+02:00",
+        "dirty": true,
+        "project": "21l_aisdi_lab1",
+        "branch": "master"
+    },
+    "benchmarks": [
+        {
+            "group": null,
+            "name": "test_pattern_search[Naive-100]",
+            "fullname": "lab5-pattern_search/test_benchmark.py::test_pattern_search[Naive-100]",
+            "params": {
+                "function": "UNSERIALIZABLE[<function find_n at 0x7f6019f0c820>]",
+                "function_name": "Naive",
+                "size": 100
+            },
+            "param": "Naive-100",
+            "extra_info": {
+                "function": "Naive",
+                "size": 100
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 9.172724700000003,
+                "max": 9.37441100000001,
+                "mean": 9.269988880000005,
+                "stddev": 0.08923635967029755,
+                "rounds": 5,
+                "median": 9.277812699999998,
+                "iqr": 0.1632449749999907,
+                "q1": 9.183642975000012,
+                "q3": 9.346887950000003,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 9.172724700000003,
+                "hd15iqr": 9.37441100000001,
+                "ops": 0.10787499455986396,
+                "total": 46.34994440000003,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pattern_search[Naive-300]",
+            "fullname": "lab5-pattern_search/test_benchmark.py::test_pattern_search[Naive-300]",
+            "params": {
+                "function": "UNSERIALIZABLE[<function find_n at 0x7f6019f0c820>]",
+                "function_name": "Naive",
+                "size": 300
+            },
+            "param": "Naive-300",
+            "extra_info": {
+                "function": "Naive",
+                "size": 300
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 24.855800200000033,
+                "max": 27.703121399999986,
+                "mean": 26.148906800000002,
+                "stddev": 1.2115558881755644,
+                "rounds": 5,
+                "median": 25.911237200000016,
+                "iqr": 2.1057013999999796,
+                "q1": 25.119905200000005,
+                "q3": 27.225606599999985,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 24.855800200000033,
+                "hd15iqr": 27.703121399999986,
+                "ops": 0.038242516509332615,
+                "total": 130.74453400000002,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pattern_search[Naive-500]",
+            "fullname": "lab5-pattern_search/test_benchmark.py::test_pattern_search[Naive-500]",
+            "params": {
+                "function": "UNSERIALIZABLE[<function find_n at 0x7f6019f0c820>]",
+                "function_name": "Naive",
+                "size": 500
+            },
+            "param": "Naive-500",
+            "extra_info": {
+                "function": "Naive",
+                "size": 500
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 41.6605821,
+                "max": 45.3400532,
+                "mean": 43.19042282,
+                "stddev": 1.5387573267839476,
+                "rounds": 5,
+                "median": 43.560224500000004,
+                "iqr": 2.375476249999963,
+                "q1": 41.709061650000024,
+                "q3": 44.08453789999999,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 41.6605821,
+                "hd15iqr": 45.3400532,
+                "ops": 0.023153281091217618,
+                "total": 215.95211410000002,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pattern_search[Naive-700]",
+            "fullname": "lab5-pattern_search/test_benchmark.py::test_pattern_search[Naive-700]",
+            "params": {
+                "function": "UNSERIALIZABLE[<function find_n at 0x7f6019f0c820>]",
+                "function_name": "Naive",
+                "size": 700
+            },
+            "param": "Naive-700",
+            "extra_info": {
+                "function": "Naive",
+                "size": 700
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 63.62193860000002,
+                "max": 70.3778342999999,
+                "mean": 65.75752489999998,
+                "stddev": 2.7586331633758694,
+                "rounds": 5,
+                "median": 64.55876039999998,
+                "iqr": 3.2864418250000824,
+                "q1": 63.94265989999994,
+                "q3": 67.22910172500002,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 63.62193860000002,
+                "hd15iqr": 70.3778342999999,
+                "ops": 0.015207385033435168,
+                "total": 328.7876244999999,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pattern_search[Naive-1000]",
+            "fullname": "lab5-pattern_search/test_benchmark.py::test_pattern_search[Naive-1000]",
+            "params": {
+                "function": "UNSERIALIZABLE[<function find_n at 0x7f6019f0c820>]",
+                "function_name": "Naive",
+                "size": 1000
+            },
+            "param": "Naive-1000",
+            "extra_info": {
+                "function": "Naive",
+                "size": 1000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 93.28962620000016,
+                "max": 113.38740980000011,
+                "mean": 101.79095026000007,
+                "stddev": 9.107983024781163,
+                "rounds": 5,
+                "median": 96.48415439999997,
+                "iqr": 15.333235125000158,
+                "q1": 95.340597275,
+                "q3": 110.67383240000015,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 93.28962620000016,
+                "hd15iqr": 113.38740980000011,
+                "ops": 0.009824056042759644,
+                "total": 508.95475130000034,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pattern_search[Knuth Morris Pratt-100]",
+            "fullname": "lab5-pattern_search/test_benchmark.py::test_pattern_search[Knuth Morris Pratt-100]",
+            "params": {
+                "function": "UNSERIALIZABLE[<function find_kmp at 0x7f6019f0c940>]",
+                "function_name": "Knuth Morris Pratt",
+                "size": 100
+            },
+            "param": "Knuth Morris Pratt-100",
+            "extra_info": {
+                "function": "Knuth Morris Pratt",
+                "size": 100
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 16.047469800000044,
+                "max": 17.405650400000013,
+                "mean": 16.44872720000003,
+                "stddev": 0.563405568837646,
+                "rounds": 5,
+                "median": 16.208147800000006,
+                "iqr": 0.6496420999998236,
+                "q1": 16.07520697500013,
+                "q3": 16.724849074999952,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 16.047469800000044,
+                "hd15iqr": 17.405650400000013,
+                "ops": 0.060794977498319636,
+                "total": 82.24363600000015,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pattern_search[Knuth Morris Pratt-300]",
+            "fullname": "lab5-pattern_search/test_benchmark.py::test_pattern_search[Knuth Morris Pratt-300]",
+            "params": {
+                "function": "UNSERIALIZABLE[<function find_kmp at 0x7f6019f0c940>]",
+                "function_name": "Knuth Morris Pratt",
+                "size": 300
+            },
+            "param": "Knuth Morris Pratt-300",
+            "extra_info": {
+                "function": "Knuth Morris Pratt",
+                "size": 300
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 42.20425030000001,
+                "max": 50.10689209999987,
+                "mean": 46.00280163999996,
+                "stddev": 3.760218554421166,
+                "rounds": 5,
+                "median": 44.09353660000011,
+                "iqr": 6.760773549999897,
+                "q1": 43.26200447499997,
+                "q3": 50.022778024999866,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 42.20425030000001,
+                "hd15iqr": 50.10689209999987,
+                "ops": 0.021737806488952807,
+                "total": 230.0140081999998,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pattern_search[Knuth Morris Pratt-500]",
+            "fullname": "lab5-pattern_search/test_benchmark.py::test_pattern_search[Knuth Morris Pratt-500]",
+            "params": {
+                "function": "UNSERIALIZABLE[<function find_kmp at 0x7f6019f0c940>]",
+                "function_name": "Knuth Morris Pratt",
+                "size": 500
+            },
+            "param": "Knuth Morris Pratt-500",
+            "extra_info": {
+                "function": "Knuth Morris Pratt",
+                "size": 500
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 71.66033960000004,
+                "max": 79.78699140000003,
+                "mean": 76.33663456000004,
+                "stddev": 3.0530563041543544,
+                "rounds": 5,
+                "median": 77.13595979999991,
+                "iqr": 3.800771050000094,
+                "q1": 74.44298660000004,
+                "q3": 78.24375765000013,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 71.66033960000004,
+                "hd15iqr": 79.78699140000003,
+                "ops": 0.013099870144445616,
+                "total": 381.6831728000002,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pattern_search[Knuth Morris Pratt-700]",
+            "fullname": "lab5-pattern_search/test_benchmark.py::test_pattern_search[Knuth Morris Pratt-700]",
+            "params": {
+                "function": "UNSERIALIZABLE[<function find_kmp at 0x7f6019f0c940>]",
+                "function_name": "Knuth Morris Pratt",
+                "size": 700
+            },
+            "param": "Knuth Morris Pratt-700",
+            "extra_info": {
+                "function": "Knuth Morris Pratt",
+                "size": 700
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 104.90913809999984,
+                "max": 114.16275309999992,
+                "mean": 107.8587129999999,
+                "stddev": 3.6895103958473805,
+                "rounds": 5,
+                "median": 106.44082449999996,
+                "iqr": 3.859008625000115,
+                "q1": 105.62230057499983,
+                "q3": 109.48130919999994,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 104.90913809999984,
+                "hd15iqr": 114.16275309999992,
+                "ops": 0.009271388209499597,
+                "total": 539.2935649999995,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pattern_search[Knuth Morris Pratt-1000]",
+            "fullname": "lab5-pattern_search/test_benchmark.py::test_pattern_search[Knuth Morris Pratt-1000]",
+            "params": {
+                "function": "UNSERIALIZABLE[<function find_kmp at 0x7f6019f0c940>]",
+                "function_name": "Knuth Morris Pratt",
+                "size": 1000
+            },
+            "param": "Knuth Morris Pratt-1000",
+            "extra_info": {
+                "function": "Knuth Morris Pratt",
+                "size": 1000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 148.6201731000001,
+                "max": 155.86978090000002,
+                "mean": 151.84905606000012,
+                "stddev": 3.330183952236461,
+                "rounds": 5,
+                "median": 151.41645719999997,
+                "iqr": 6.251605975000075,
+                "q1": 148.68751717500015,
+                "q3": 154.93912315000023,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 148.6201731000001,
+                "hd15iqr": 155.86978090000002,
+                "ops": 0.006585487101117508,
+                "total": 759.2452803000006,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pattern_search[Karp Rabin-100]",
+            "fullname": "lab5-pattern_search/test_benchmark.py::test_pattern_search[Karp Rabin-100]",
+            "params": {
+                "function": "UNSERIALIZABLE[<function find_kr at 0x7f6019f0c9d0>]",
+                "function_name": "Karp Rabin",
+                "size": 100
+            },
+            "param": "Karp Rabin-100",
+            "extra_info": {
+                "function": "Karp Rabin",
+                "size": 100
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 44.463190499999655,
+                "max": 51.32265219999999,
+                "mean": 46.268391099999825,
+                "stddev": 2.8735088181492983,
+                "rounds": 5,
+                "median": 45.445615799999814,
+                "iqr": 2.5388544249998404,
+                "q1": 44.49523949999991,
+                "q3": 47.03409392499975,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 44.463190499999655,
+                "hd15iqr": 51.32265219999999,
+                "ops": 0.02161302730061871,
+                "total": 231.34195549999913,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pattern_search[Karp Rabin-300]",
+            "fullname": "lab5-pattern_search/test_benchmark.py::test_pattern_search[Karp Rabin-300]",
+            "params": {
+                "function": "UNSERIALIZABLE[<function find_kr at 0x7f6019f0c9d0>]",
+                "function_name": "Karp Rabin",
+                "size": 300
+            },
+            "param": "Karp Rabin-300",
+            "extra_info": {
+                "function": "Karp Rabin",
+                "size": 300
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 132.84387659999993,
+                "max": 165.5631676999992,
+                "mean": 148.05036013999978,
+                "stddev": 14.476219620413174,
+                "rounds": 5,
+                "median": 140.4385311000001,
+                "iqr": 24.205763899999624,
+                "q1": 138.22533307499998,
+                "q3": 162.4310969749996,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 132.84387659999993,
+                "hd15iqr": 165.5631676999992,
+                "ops": 0.006754458408979061,
+                "total": 740.251800699999,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pattern_search[Karp Rabin-500]",
+            "fullname": "lab5-pattern_search/test_benchmark.py::test_pattern_search[Karp Rabin-500]",
+            "params": {
+                "function": "UNSERIALIZABLE[<function find_kr at 0x7f6019f0c9d0>]",
+                "function_name": "Karp Rabin",
+                "size": 500
+            },
+            "param": "Karp Rabin-500",
+            "extra_info": {
+                "function": "Karp Rabin",
+                "size": 500
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 264.9501375,
+                "max": 273.5704556999999,
+                "mean": 270.13393078000007,
+                "stddev": 3.2877021606972034,
+                "rounds": 5,
+                "median": 270.56706310000027,
+                "iqr": 4.1403694500002075,
+                "q1": 268.338138525,
+                "q3": 272.4785079750002,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 264.9501375,
+                "hd15iqr": 273.5704556999999,
+                "ops": 0.0037018674296581074,
+                "total": 1350.6696539000004,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pattern_search[Karp Rabin-700]",
+            "fullname": "lab5-pattern_search/test_benchmark.py::test_pattern_search[Karp Rabin-700]",
+            "params": {
+                "function": "UNSERIALIZABLE[<function find_kr at 0x7f6019f0c9d0>]",
+                "function_name": "Karp Rabin",
+                "size": 700
+            },
+            "param": "Karp Rabin-700",
+            "extra_info": {
+                "function": "Karp Rabin",
+                "size": 700
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 268.91344539999955,
+                "max": 385.7884225000007,
+                "mean": 304.16093000000035,
+                "stddev": 49.521491638648406,
+                "rounds": 5,
+                "median": 275.5534436000007,
+                "iqr": 61.52555985000049,
+                "q1": 272.5309555000001,
+                "q3": 334.0565153500006,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 268.91344539999955,
+                "hd15iqr": 385.7884225000007,
+                "ops": 0.0032877332404263717,
+                "total": 1520.8046500000019,
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_pattern_search[Karp Rabin-1000]",
+            "fullname": "lab5-pattern_search/test_benchmark.py::test_pattern_search[Karp Rabin-1000]",
+            "params": {
+                "function": "UNSERIALIZABLE[<function find_kr at 0x7f6019f0c9d0>]",
+                "function_name": "Karp Rabin",
+                "size": 1000
+            },
+            "param": "Karp Rabin-1000",
+            "extra_info": {
+                "function": "Karp Rabin",
+                "size": 1000
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "warmup": false
+            },
+            "stats": {
+                "min": 389.8831855999997,
+                "max": 390.2355464000011,
+                "mean": 390.09262505999993,
+                "stddev": 0.13733523835082734,
+                "rounds": 5,
+                "median": 390.10408430000007,
+                "iqr": 0.19150004999937664,
+                "q1": 390.00920735,
+                "q3": 390.2007073999994,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 389.8831855999997,
+                "hd15iqr": 390.2355464000011,
+                "ops": 0.0025634937339463685,
+                "total": 1950.4631252999998,
+                "iterations": 1
+            }
+        }
+    ],
+    "datetime": "2021-05-12T23:05:03.530896",
+    "version": "3.4.1"
+}
