@@ -76,14 +76,16 @@ class Graph():
 
     def find_shortest_path(self, value: int) -> str:
         path = self.dijkstra(value)
-        result = ""
+        result = " " + "-"*len(self.array[0]) + " " + "\n"
         sorted_path = [sorted([x[1] for x in path if x[0] == row_num])
                        for row_num in range(len(self.array))]
         for row_num, row in enumerate(sorted_path):
+            result += "|"
             for column_num in range(len(self.array[0])):
                 result += str(self.array[row_num][column_num]) if column_num in row else " "
-            result += "\n"
-        return result[:-1]
+            result += "|\n"
+        result += " " + "-"*len(self.array[0]) + " "
+        return result
 
     @classmethod
     def make_from_txt(_class, path):
