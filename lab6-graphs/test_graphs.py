@@ -1,14 +1,15 @@
 import pytest
-from graphs import read_from_txt, Graph
+from graphs import Graph
 
 
-def test_read_from_txt():
-    assert read_from_txt("lab6-graphs/example.txt") == [[1, 1, 1, 1, 2, 2],
-                                                        [1, 0, 4, 1, 2, 2],
-                                                        [9, 4, 2, 1, 1, 1],
-                                                        [9, 9, 6, 4, 1, 1],
-                                                        [9, 9, 0, 4, 1, 1],
-                                                        [9, 9, 1, 1, 1, 1]]
+def test_make_from_txt():
+    graph = Graph.make_from_txt("lab6-graphs/example.txt")
+    assert graph.array == [[1, 1, 1, 1, 2, 2],
+                           [1, 0, 4, 1, 2, 2],
+                           [9, 4, 2, 1, 1, 1],
+                           [9, 9, 6, 4, 1, 1],
+                           [9, 9, 0, 4, 1, 1],
+                           [9, 9, 1, 1, 1, 1]]
 
 
 def test_invalid_size():
@@ -19,12 +20,13 @@ def test_invalid_size():
         Graph(array)
 
 
-def test_three_zeros():
+def test_three_source_destination_values():
     array = [[1, 0, 4, 4, 6],
              [0, 5, 4, 2, 7],
              [1, 5, 7, 0, 3]]
+    graph = Graph(array)
     with pytest.raises(ValueError):
-        Graph(array)
+        graph.find_shortest_path(value=0)
 
 
 def test_find_shortest_path():
@@ -35,9 +37,9 @@ def test_find_shortest_path():
              [9, 9, 0, 4, 1, 1],
              [9, 9, 1, 1, 1, 1]]
     graph = Graph(array)
-    assert graph.find_shortest_path() == """ 111
-                                             0 1
-                                               11
-                                                1
-                                              0 1
-                                              111"""
+    assert graph.find_shortest_path(0) == (" 111  \n"
+                                           " 0 1  \n"
+                                           "   11 \n"
+                                           "    1 \n"
+                                           "  0 1 \n"
+                                           "  111 ")
