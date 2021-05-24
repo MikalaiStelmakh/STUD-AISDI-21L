@@ -4,10 +4,15 @@ from typing import List, Tuple
 Point = Tuple[int, int]
 
 
+class InvalidGraph(ValueError):
+    def __init__(self, message) -> None:
+        super().__init__(message)
+
+
 class Graph():
     def __init__(self, array: List[List[int]]) -> None:
         if not all(len(array[0]) == len(row) for row in array):
-            raise ValueError("The rows must be the same length")
+            raise InvalidGraph("The rows must be the same length")
         self.array = array
 
     def find_source_dest_positions(self, value) -> List[Point]:
@@ -22,9 +27,11 @@ class Graph():
         positions = []
         for row_index, row in enumerate(self.array):
             if value in row:
-                positions.append((row_index, row.index(value)))
+                for col_index, element in enumerate(row):
+                    if element == value:
+                        positions.append((row_index, col_index))
         if len(positions) != 2:
-            raise ValueError("There must be exactly one source and one destination value.\n")
+            raise InvalidGraph("There must be exactly one source and one destination value.\n")
         return positions
 
     def minDistance(self, dist, queue):
@@ -93,7 +100,14 @@ class Graph():
         with open(path) as f:
             for line in f:
                 line = line.rstrip()
-                result.append([int(number) for number in line])
+                result.append([number for number in line])
+        for row_index, row in enumerate(result):
+            for col_index, col in enumerate(row):
+                try:
+                    result[row_index][col_index] = int(col)
+                except ValueError:
+                    raise InvalidGraph("Invalid character in: "
+                                       f"Line {row_index+1}, column {col_index+1}. \n")
         return _class(result)
 
 
