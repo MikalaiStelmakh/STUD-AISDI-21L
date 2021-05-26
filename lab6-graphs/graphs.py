@@ -58,7 +58,7 @@ class Graph():
                 min_index = i
         return min_index
 
-    def possible(self, pos, x=0, y=0):
+    def possible(self, pos: Point, x=0, y=0):
         """
         Parameters:
             pos: current position.
